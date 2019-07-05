@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人注册</title>
+    <link rel="stylesheet" href="../css/regsiter.css">
+</head>
+
+<body>
+    <!-- header begin -->
+    <div class="header">
+        <div class="logo-con w clearfix">
+            <a href="https://www.jd.com" class="logo ">
+            </a>
+            <div class="logo-title">欢迎注册</div>
+
+            <div class="have-account">已有账号？ <a
+                    href="https://passport.jd.com/new/login.aspx?ReturnUrl=http://www.jd.com">请登录&gt;</a></div>
+
+        </div>
+    </div>
+    <!-- header end -->
+    <div class="container w">
+        <div class="progress-bar clearfix">
+            <div class="pro-step cur-step ">
+                <span class="step-index">1</span>
+                <p class="step-desc">验证手机号</p>
+            </div>
+            <div class="pro-line pro-line1 person-pro-line person-pro-line1 "></div>
+            <div class="pro-step pro-step2 person-pro-step2  ">
+                <span class="step-index">2</span>
+                <p class="step-desc">填写账号信息</p>
+            </div>
+            <div class="pro-line pro-line2 person-pro-line person-pro-line2 "></div>
+            <div class="pro-step pro-step3 person-pro-step3  ">
+                <span class="step-index">3</span>
+                <p class="step-desc">注册成功</p>
+            </div>
+        </div>
+        <!-- widget progress-bar end -->
+
+        <!-- widget reg-steps begin -->
+        <div class="main ">
+            <div class="reg-form">
+                <form action="" id="register-form" method="POST">
+                    <div id="step1-wrap">
+                        <div class="item-phone-wrap">
+                            <div class="form-item form-item-phone">
+                                <label class="select-country" id="select-country" country_id="0086">中国 0086<a
+                                        href="javascript:void(0) " class="arrow"></a></label>
+                                <div class="item-input-wrap">
+                                    <input type="text" id="form-phone" maxlength="11" name="phone" class="field"
+                                        placeholder="建议使用常用手机号" autocomplete="off"
+                                        default="<i class='i-def'></i>验证完成后，你可以使用该手机登录或找回密码">
+                                    <i class="i-status"></i>
+                                    <i class="i-cancel"></i>
+                                </div>
+                                <div class="input-tip">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-getcode-wrap">
+                            <div class="form-item form-item-getcode" clstag="pageclick|keycount|reg_puser_201804031|7">
+                                点击按钮进行验证 <div id="slideAuthCode" class="JDValidate-wrap"></div>
+                            </div>
+                            <div class="input-tip">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="item-phonecode-wrap">
+                            <div class="form-item form-item-phonecode">
+                                <div class="phonecode-left">
+                                    <label>手机验证码</label>
+                                    <input type="text" name="mobileCode" maxlength="6" autocomplete="off" id="phoneCode"
+                                        class="field phonecode" placeholder="输入验证码">
+                                    <i class="i-status"></i>
+                                    <i class="i-cancel"></i>
+                                </div>
+                                <button id="getPhoneCode" class="btn-phonecode" type="button">重新获取</button>
+                                <div class="input-tip">
+                                    <span></span>
+                                </div>
+                                <div class="audio-tip">收不到短信验证码？点击&nbsp;<span class="get-auth-code"
+                                        clstag="pageclick|keycount|reg_puser_201804031|13">获取语音验证码</span></div>
+                            </div>
+                        </div>
+                        <div class="form-agreen">
+                        </div>
+                        <div id="step1-next" class="btn-register" clstag="pageclick|keycount|reg_puser_201804031|3">下一步
+                        </div>
+                    </div>
+                    <!-- 填写信息页 -->
+                    <div id="step2-wrap">
+                        <div class="form-item form-item-account" id="form-item-account">
+                            <label>用　户　名</label>
+                            <input type="text" id="form-account" name="regName" class="field" autocomplete="off"
+                                maxlength="20" placeholder="您的账户名和登录名"
+                                default="<i class='i-def'></i>支持中文、英文、数字、“-”、“_”的组合，4-20个字符">
+                            <i class="i-status"></i>
+                            <i class="i-cancel"></i>
+                        </div>
+                        <div class="input-tip">
+                            <span></span>
+                        </div>
+                        <div class="form-item">
+                            <label>设 置 密 码</label>
+                            <input autocomplete="off" type="password" name="pwd" id="form-pwd" class="field"
+                                maxlength="20" placeholder="建议使用两种或两种以上字符组合"
+                                default="<i class='i-def'></i>建议使用字母、数字和符号两种及以上的组合，6-20个字符">
+                            <i class="i-status"></i>
+                            <i class="i-cancel"></i>
+                        </div>
+                        <div class="input-tip">
+                            <span></span>
+                        </div>
+                        <div class="form-item">
+                            <label>确 认 密 码</label>
+                            <input type="password" name="pwdRepeat" id="form-equalTopwd" class="field"
+                                placeholder="请再次输入密码" default="<i class='i-def'></i>请再次输入密码">
+                            <i class="i-status"></i>
+                            <i class="i-cancel"></i>
+                        </div>
+                        <div class="input-tip">
+                            <span></span>
+                        </div>
+                        <div class="item-email-wrap">
+                            <div class="form-item">
+                                <label>邮 箱 验 证</label>
+                                <input type="text" name="email" id="form-email" class="field" autocomplete="off"
+                                    maxlength="50" placeholder="请输入邮箱" default="<i class='i-def'></i>验证完成后，你可以使用该邮箱登录">
+                                <i class="i-status"></i>
+                            </div>
+                            <div class="input-tip">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="item-mailcode-wrap">
+                            <div class="form-item form-item-mailcode">
+                                <div class="mailcode-left">
+                                    <label>邮箱验证码</label>
+                                    <input type="text" name="mailCode" maxlength="6" autocomplete="off" id="mailCode"
+                                        class="field mailcode" placeholder="请输入邮箱验证码">
+                                    <i class="i-status"></i>
+                                    <i class="i-cancel"></i>
+                                </div>
+                                <button id="getMailCode" class="btn-mailcode" type="button"
+                                    clstag="pageclick|keycount|reg_puser_201804031|16">获取验证码</button>
+                                <div class="input-tip">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div><button class="btn-register" id="form-register"
+                                clstag="pageclick|keycount|reg_puser_201804031|18">立即注册</button></div>
+                        <div class="input-tip">
+                            <span></span>
+                        </div>
+                        <!--<div class="back-btn" id="back-btn">返回上一步</div>-->
+                    </div>
+                </form>
+            </div>
+</body>
+
+</html>

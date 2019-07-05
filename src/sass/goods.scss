@@ -1,0 +1,969 @@
+@charset "utf-8";
+html,body{
+    height: 100%;
+    font: 12px/150% tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #666;
+    background: #fff;
+}
+.crumb-wrap {
+    z-index: 5;
+}
+/* goods */
+.w {
+    width: 1210px;
+    margin: 0 auto;
+}
+.hide {
+    display: none;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#nav-shop {
+    padding: 25px 0 5px;
+    height: 24px;
+    border-bottom: 2px solid #000;
+    .shopHeaderArea {
+        float: right;
+        font-family: "microsoft yahei";
+        font-size: 12px;
+        position: relative;
+        z-index: 10;
+        .shopHeader {
+            float: left;
+            .shopInfo {
+                float: left;
+                position: relative;   
+            }
+        }
+        .sprite-pop {
+            float: left;
+            margin: 4px 5px 0 0;
+            width: 15px;
+            height: 14px;
+            background-image: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/common/i/__sprite.png?v=1552459647855);
+            background-position: -50px 0;
+        }
+        .shopName {
+            margin: 3px 0 0;
+            a {
+                height: 24px;
+                color: #000;
+                display: block;
+                line-height: 18px;
+            }
+        }
+        .shop-star-rating-box {
+            float: left;
+            margin: 3px 0 0 15px;
+        }
+        spacer {
+            float: left;
+            width: 1px;
+            height: 12px;
+            margin: 7px 15px 0;
+            padding: 0;
+            background: #dcdcdc;
+            overflow: hidden;
+        }
+        .im.customer-service {
+            padding: 0;
+            line-height: 24px;
+            .sprite-im {
+                width: 16px;
+                height: 16px;
+                background-image: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/common/i/__sprite.png?v=1552459647855);
+                background-position: 0 -34px;
+                vertical-align: top;
+                margin-top: 5px;
+            }
+        }
+        .shop-btn {
+            width: 82px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            margin: 0;
+            a {
+                color: #000;
+            }
+        }
+        .contact-layer .content {
+            display: none;
+            top: 27px;
+            width: 215px;
+            border: 1px solid #ccc;
+            right: auto;
+            position: absolute;
+            z-index: 0;
+            background-color: #fff;
+            left: -1px;
+            .pop-score-detail {
+                padding: 12px 15px 8px;
+                .score-title {
+                    margin-bottom: 8px;
+                    .col1 {
+                        float: left;
+                        font-weight: 700;
+                    }
+                }
+                .score-info {
+                    display: block;
+                    margin-bottom: 6px;
+                    .score-desc {
+                        color: #999;
+                        float: left;
+                    }
+                    .score-detail {
+                        float: left;
+                    }
+                }
+                
+            }
+            .pop-shop-im {
+                border-top: 1px dotted #e6e6e6;
+                margin: 0 15px;
+                padding: 10px 0;
+                display: inline-block;
+                display: block;
+            }
+            .pop-shop-qr-code {
+                border-top: 1px dotted #e6e6e6;
+                margin: 0 15px;
+                padding: 14px 0 10px;
+            }
+            .btns {
+                background: #f6f6f6;
+                font-size: 0;
+                text-align: center;
+            }
+        }
+        .attention {
+            margin-left: 10px;
+        }
+        .attention {
+            float: left;
+            height: 24px;
+            line-height: 24px;
+            margin-right: 15px;
+            .plus {
+                float: none;
+                display: inline-block;
+                text-indent: 999px;
+                overflow: hidden;
+                width: 16px;
+                height: 16px;
+                background-image: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/common/i/__sprite.png?v=1552459647855);
+                background-position: -34px 0;
+                vertical-align: top;
+                margin-top: 4px;
+                color: #753474;
+                font-weight: 700;
+                font-size: 15px;
+                margin: -2px 1px 0 0;
+            }
+        }
+    }
+    .im .sprite-im {
+        width: 16px;
+        height: 20px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+    }
+    .star, .pop-score-summary .star {
+        padding-top: 2px;
+    }
+    .star .star-bg, .pop-score-summary .star .star-bg {
+        width: 94px;
+        height: 16px;
+        border-radius: 8px;
+        background: #e6e6e6;
+        overflow: hidden;
+    }
+    .star .star-gray, .pop-score-summary .star .star-gray {
+        position: relative;
+        width: 80px;
+        height: 14px;
+        margin: 1px 0 0 7px;
+        background: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/common/i/star-gray.png) left center repeat-x;
+    }
+    .star .star-light, .pop-score-summary .star .star-light {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 14px;
+        background: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/common/i/star-light.png) left center repeat-x;
+    }
+    .follow, .im,  .jimi, .phone {
+        cursor: pointer;
+        float: left;
+        margin-right: 10px;
+        white-space: nowrap;
+    }
+    
+}
+.EDropdown, .EDropdown .head {
+    position: relative;
+}
+.EDropdown .head {
+    height: 23px;
+    line-height: 23px;
+    float: left;
+    z-index: 1;
+    padding: 1px 1px 0;
+    cursor: pointer;
+    .text {
+        margin-left: 5px;
+    }
+}
+.EDropdown .arrow {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+    margin: 0 5px;
+    _font-size: 0;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-top-color: #000;
+    transition: .2s ease;
+    -ms-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+}
+.EDropdown .content {
+    right: auto;
+    position: absolute;
+    z-index: 0;
+    // background-color: #fff;
+    top: 23px;
+    left: -1px;
+}
+.m, .mb, .mc, .mt, .p-detail, .p-img, .p-market, .p-name, .p-price, .sm, .smb, .smc, .smt {
+    overflow: hidden;
+}
+.notice-msg {
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: #f8f8f8;
+    color: #d91f20;
+    s {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        margin-right: 5px;
+        vertical-align: middle;
+        width: 16px;
+        height: 16px;
+        background: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/notice/i/notice.png) no-repeat;
+    }
+    strong {
+        line-height: 16px;
+    }
+}
+ins {
+    text-decoration: none;
+}
+.product-intro {
+    position: relative;
+    margin: 30px 0;
+    .preview-wrap {
+        width: 452px;
+        float: left;
+        .preview {
+            position: relative;
+            .jqzoom {
+                padding: 0;
+                position: relative;
+                img {
+                    border: 0;
+                    vertical-align: middle;
+                }
+            }
+            .spec-list {
+                margin-bottom: 10px;
+                position: relative;
+                _zoom: 1;
+                .arrow-prev {
+                    left: 0;
+                    .disabled i {
+                        border-right-color: #e8e8e8;
+                    }
+                    .sprite-arrow-prev {
+                        border-right-style: solid;
+                        border-right-color: #999;
+                    }
+                }
+                .arrow-next {
+                    right: 0;
+                    .disabled i {
+                        border-left-color: #e8e8e8;
+                    }
+                    .sprite-arrow-next {
+                        border-left-style: solid;
+                        border-left-color: #999;
+                        margin-left: 6px;
+                    }
+                }
+                .spec-items {
+                    width: 404px;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    ul {
+                        width: 2000px;
+                        zoom: 1;
+                        overflow: hidden;
+                        li {
+                            float: left;
+                            margin: 0 3px;
+                            opacity: .5;
+                            filter: alpha(opacity=50);
+                            img {
+                                border: 0;
+                                vertical-align: middle;
+                            }
+                        }
+                        .img-hover, li:hover {
+                            opacity: 1;
+                            filter: alpha(opacity=100);
+                        }
+                    }
+                }
+                .arrow-next, .arrow-prev {
+                    display: block;
+                    width: 16px;
+                    height: 41px;
+                    padding-top: 32px;
+                    border: 1px solid #eee;
+                    background: #f8f8f8;
+                    position: absolute;
+                    cursor: pointer;
+                }
+                .arrow-next i,.arrow-prev i {
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border: 5px dashed transparent;
+                    overflow: hidden;
+                    font-size: 0;
+                }
+            }
+            .preview-info {
+                font-size: 12px;
+                color: #999;
+                .left-btns {
+                    float: left;
+                    a {
+                        cursor: pointer;
+                        margin-left: 10px;
+                        color: #000;
+                        i {
+                            display: inline-block;
+                            *display: inline;
+                            *zoom: 1;
+                            vertical-align: -1px;
+                            height: 12px;
+                            margin-right: 5px;
+                        }
+                    }
+                    .share i {
+                        width: 11px;
+                        height: 12px;
+                        background-image: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/preview/i/__sprite.png?v=1552459647818);
+                        background-position: -40px -24px;
+                    }
+                    .follow i {
+                        width: 14px;
+                        height: 12px;
+                        background-image: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/preview/i/__sprite.png?v=1552459647818);
+                        background-position: 0 -24px;
+                    }
+                }
+                .right-btns {
+                    float: right;
+                }
+            }
+        }
+    }
+    .itemInfo-wrap {
+        width: 525px;
+        float: left;
+        margin-left: 20px;
+        .s-arrow {
+            font-family: simsun;
+            text-decoration: none;
+        }
+        .country-sign {
+            padding-bottom: 12px;
+            .country-map-icon {
+                width: 28px;
+                height: 20px;
+            }
+            img {
+                border: 0;
+                vertical-align: middle;
+            }
+            .country-name {
+                font-size: 12px;
+                color: #000;
+            }
+        }
+        .sku-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            line-height: 24px;
+            margin-bottom: 7px;
+        }
+        .news {
+            color: #d91f20;
+            margin-bottom: 19px;
+            .item {
+                margin-bottom: 5px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                *white-space: normal;
+            }
+        }
+        #summary-wrap {
+            z-index: 9;
+        }
+        .dt {
+            float: left;
+            width: 50px;
+            color: #939393;
+        }
+        .dd {
+            margin-left: 52px;
+            color: #000;
+        }
+        .d-tip {
+            margin-left: 7px;
+            color: #6286ca;
+        }
+        .d-tip, .d-tip .tips {
+            position: relative;
+            z-index: 5;
+            display: inline-block;
+        }
+        .d-tip .tips {
+            top: 1px;
+            margin-left: 5px;
+            width: 11px;
+            height: 11px;
+            background-image: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/common/i/__sprite.png?v=1552459647855);
+            background-position: -50px -30px;
+            cursor: pointer;
+        }
+        .summary {
+            position: relative;
+            padding-bottom: 5px;
+            .summary-price-wrap {
+                padding: 20px 20px 8px;
+                margin-bottom: 10px;
+                background: #f8f8f8;
+                color: #000;
+                .dd {
+                    margin-bottom: 14px;
+                }
+                .summary-tallage {
+                    *position: relative;
+                    z-index: 6;
+                }
+                #summary-quan {
+                    padding-bottom: 2px;
+                }
+                .li {
+                    margin-bottom: 3px;
+                    line-height: 32px;
+                    display: inline-block;
+                    display: block;
+                }
+                .li:after,.summary-top:after{
+                    content: ".";
+                    display: block;
+                    height: 0;
+                    clear: both;
+                    visibility: hidden;
+                }
+                .summary-top {
+                    display: inline-block;
+                    display: block;
+                    #summary-promotion .dt {
+                        padding-top: 6px;
+                    }
+                    .p-promotions-wrap {
+                        position: relative;
+                        overflow: hidden;
+                        .p-promotions {
+                            position: relative;
+                            line-height: 30px;
+                            padding-right: 80px;
+                            min-height: 35px;
+                            *zoom: 1;
+                            .hl_red_bg {
+                                color: #fff;
+                                background: #d91f20;
+                                padding: 2px 3px;
+                                margin-right: 10px;
+                                display: inline-block;
+                                line-height: 15px;
+                                *zoom: 1;
+                            }
+                            .hl_red {
+                                color: #000;
+                                line-height: 18px;
+                            }
+                            .hl_red_bg.yellow {
+                                background: #d3b679;
+                            }
+                        }
+                    }
+                }
+                .p-price {
+                    font-weight: 700;
+                    color: #dc1d20;
+                    span {
+                        font-size: 26px;
+                    }
+                    .price {
+                        font-size: 30px;
+                    }                    
+                }
+                .summary-price .J-fans-price .fans-price .price {
+                    font-size: 20px;
+                    position: relative;
+                    vertical-align: middle;
+                    color: #7049ff;
+                }
+                .summary-price {
+                    .dd {
+                    margin-bottom: 14px;
+                    }
+                    .plus-price {
+                        font-weight: 400;
+                        .price {
+                            font-size: 20px;
+                            color: #000;
+                        }
+                    }
+                    .plus-icon {
+                        margin: 0 6px 0 3px;
+                        vertical-align: 0;
+                    }
+                    .plus-text {
+                        vertical-align: 3px;
+                        color: #000;
+                    }
+                    .plus-tips {
+                        margin-left: 7px;
+                        vertical-align: 3px;
+                        color: #6286ca;
+                        i {
+                            margin-left: 3px;
+                        }          
+                    }
+                }
+                .user-price {
+                    padding-bottom: 10px;
+                    padding-left: 52px;
+                    .p-price-user {
+                        position: relative;
+                        bottom: -2px;
+                        color: #ff911c;
+                        font-size: 16px;
+                        font-family: "microsoft yahei";
+                    }
+                    .text {
+                        margin-left: 20px;
+                        color: #999;
+                    }
+                    .sprite-question {
+                        height: 16px;
+                    }
+                }
+            }
+        }
+        .p-choose-wrap {
+            padding-left: 20px;
+            
+        }
+        .summary-stock {
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            .dt {
+                margin-top: 5px;
+            }
+            .stock-from {
+                float: left;
+                margin: 5px 0;
+                span {
+                    margin: 0 10px;
+                    color: #5e6061;
+                }
+            }
+            .store {
+                float: left;
+                margin: 5px 5px 5px 0;
+                .stock-address {
+                    float: left;
+                    border: 1px solid #dadada;
+                    margin-top: -4px;
+                    z-index: 8;
+                    .head {
+                        white-space: nowrap;
+                        .text {
+                            float: left;
+                        }
+                    }
+                    .address-select, .address-used {
+                        cursor: pointer;
+                    }
+                    dl {
+                        margin: 0 10px;
+                        padding-bottom: 15px;
+                        .clicked .stock-address-list {
+                            display: block;
+                        }
+                        dd {
+                            padding-top: 10px;
+                            .address-tab {
+                               .tab {
+                                    height: 26px;
+                                    li {
+                                        display: inline-block;
+                                        *display: inline;
+                                        *zoom: 1;
+                                        margin-right: 5px;
+                                        border: 1px solid #ddd;
+                                        padding: 2px 10px;
+                                        background: #fff;
+                                        color: #005aa0;
+                                        font: 700 14px 'microsoft yahei';
+                                    }
+                                    .current {
+                                        border: 2px solid #e4393c;
+                                        border-bottom: 2px solid #fff;
+                                    }
+                                } 
+                                .tab-con {
+                                    border-top: 2px solid #e4393c;
+                                    margin-top: -2px;
+                                    padding-top: 10px;
+                                    padding: 10px 0;
+                                    .address-tab .tab-con li {
+                                        width: 6.4em;
+                                        margin-right: 5px;
+                                        margin-bottom: 5px;
+                                        a {
+                                            margin-right: 0;
+                                        }
+                                    }
+                                }
+                                .tab a, .tab li, .tab-item {
+                                    float: left;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .content {
+                    background-color: #fff;
+                    border: 1px solid #dadada;
+                    width: 360px;
+                    padding-top: 10px;
+                }
+                .store-prompt {
+                    margin-left: 10px;
+                    height: 24px;
+                    float: left;
+                }
+            }
+            .d-tip {
+                display: none;
+                float: left;
+                margin-top: 5px;
+                margin-left: 0;
+                color: #000;
+            }
+        }
+        #choose-attrs {
+            clear: both;
+            #choose-attr-1 {
+                margin-top: 10px;
+                line-height: 40px;
+            }
+        }
+        #choose-baitiao {
+            margin-top: 10px;
+            .baitiao-list {
+                float: left;
+            }
+            .baitiao-text {
+                clear: both;
+            }
+            
+        }
+        .baitiao-list {
+            .baitiao-tips {
+                position: absolute;
+                z-index: 6;
+                top: 32px;
+                left: 0;
+                width: 250px;
+                padding: 5px 10px;
+                background: #fefff7;
+                border: 1px solid #ccc;
+                color: #666;
+                ul {
+                    padding-bottom: 3px;
+                }
+                li {
+                    margin-top: 5px;
+                    line-height: 18px;
+                }
+            }
+            .bt-info-tips {
+                float: left;
+                height: 39px;
+            }
+            .question, .choose-jincai .question {
+                background-image: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/baitiao/i/question.png);
+            }
+
+        }
+        .choose-baitiao .item, .choose-jincai .item {
+            position: relative;
+            text-align: center;
+        }
+        .choose-baitiao .icon, .choose-jincai .icon {
+            width: 16px;
+            height: 16px;
+            overflow: hidden;
+            line-height: 1000px;
+            margin-top: 8px;
+            margin-right: 5px;
+        }
+        .li {
+            margin-bottom: 3px;
+            line-height: 32px;
+            display: inline-block;
+            display: block;
+            .li .item {
+                float: left;
+                color: #666;
+                background-color: #FFF;
+                margin-right: 7px;
+                margin-bottom: 4px;
+                position: relative;
+                b {
+                    display: none;
+                    position: absolute;
+                    bottom: 1px;
+                    right: 1px;
+                    width: 10px;
+                    height: 10px;
+                    background-image: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/colorsize/i/__sprite.png?v=1552459647869);
+                    background-position: 0 0;
+                }
+                a,.no-stock a:hover {
+                    padding: 1px;
+                }
+                a {
+                    border: 1px solid #ccc;
+                    padding: 1px 14px;
+                    display: block;
+                    white-space: nowrap;
+                    text-decoration: none;
+                    *display: inline;
+                    *zoom: 1;
+                    i {
+                        margin: 0 8px;
+                    }
+                }
+            }
+        }
+        .choose-btns {
+            .choose-amount {
+                width: 49px;
+                height: 48px;
+                overflow: hidden;
+                border: 1px solid #ccc;
+                position: relative;
+                input {
+                    display: block;
+                    width: 31px;
+                    height: 44px;
+                    line-height: 42px;
+                    position: absolute;
+                    top: 1px;
+                    left: 0;
+                    border: none;
+                    border: 0;
+                    text-align: center;
+                }
+                a.btn-reduce {
+                    bottom: -1px;
+                }
+                a.disabled {
+                    color: #ccc;
+                    cursor: not-allowed;
+                }
+                a.btn-add {
+                    top: -1px;
+                }
+                a {
+                    display: block;
+                    width: 17px;
+                    text-align: center;
+                    height: 24px;
+                    line-height: 22px;
+                    overflow: hidden;
+                    background: #f1f1f1;
+                    color: #666;
+                    position: absolute;
+                    right: -1px;
+                    border: 1px solid #ccc;
+                }
+            }
+            .btn-lg {
+                height: 50px;
+                line-height: 50px;
+                padding: 0 50px;
+                font-size: 18px;
+            }
+            .btn-def {
+                border: 1px solid #ddd;
+                background-color: #f8f8f8;
+                color: #666;
+                height: 23px;
+                line-height: 23px;
+                padding: 0 10px;
+            }
+        }
+        .choose-btns .btn-lg, .choose-btns .choose-amount {
+            margin-right: 10px;
+            float: left;
+        }
+        .qingguan {
+            padding: 0 8px;
+            color: #d91f20;
+            background: #FFDFDF;
+            line-height: 24px;
+            margin-top: 1px;
+            margin-bottom: 15px;
+        }
+        .service-info {
+            padding-top: 6px;
+            .tips-list {
+                float: left;
+                width: 350px;
+                li {
+                    float: left;
+                    margin-right: 20px;
+                    color: #939393;
+                    position: relative;
+                    img {
+                        width: 13px;
+                        height: 13px;
+                    }
+                    .tips {
+                        width: 270px;
+                        position: absolute;
+                        z-index: 9;
+                        left: -110px;
+                        top: 25px;
+                        display: none;
+                        .sprite-arrow {
+                            width: 11px;
+                            height: 6px;
+                            background-image: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/prom/i/__sprite.png?v=1552459647865);
+                            background-position: -27px -7px;
+                            position: absolute;
+                            overflow: hidden;
+                            left: 135px;
+                            top: -5px;
+                            _bottom: -1px;
+                        }
+                        .content {
+                            padding: 10px;
+                            background: #fff;
+                            border: 1px solid #cecbce;
+                            color: #666;
+                            -moz-box-shadow: 0 0 2px 2px #eee;
+                            -webkit-box-shadow: 0 0 2px 2px #eee;
+                            box-shadow: 0 0 2px 2px #eee;
+                        }
+                    }
+                }
+            }
+            .tips-more {
+                top: -1px;
+                float: right;
+                color: #939393;
+                border: 1px solid #fff;
+                -webkit-tap-highlight-color: transparent;
+                position: relative;
+                .view-more {
+                    position: relative;
+                    display: inline-block;
+                    background: #fff;
+                    color: #939393;
+                    padding: 0 10px 10px;
+                }
+                .more-arrow {
+                    display: inline-block;
+                    position: relative;
+                    width: 6px;
+                    height: 11px;
+                    margin-left: 6px;
+                }
+            }
+        }
+        .summary-tips {
+            border-top: 1px solid #eee;
+            padding-top: 16px;
+        }
+        /* 截止 */
+    }
+    .btn-special1, .btn-special2 {
+        font-weight: 700;
+    }
+    .track {
+        width: 128px;
+        padding: 18px 20px 16px;
+        border: 1px solid #dadada;
+        position: static;
+        *position: relative;
+        *z-index: -1;
+        float: right;
+        background: #fff;
+        right: 0;
+        top: -10px;
+    }
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+.itemInfo-wrap .summary-price-wrap .summary-price .J-fans-price .fans-text, .itemInfo-wrap .summary-price-wrap .summary-price .J-fans-price image {
+    vertical-align: middle;
+}
+.sam-price .sprite-question, .user-price .sprite-question {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    background-image: url(//static.360buyimg.com/item/worldbuy-new/1.0.64/components/prom/i/__sprite.png?v=1552459647865);
+    background-position: 0 0;
+    vertical-align: middle;
+}
