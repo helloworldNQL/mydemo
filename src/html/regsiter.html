@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>个人注册</title>
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/regsiter.css">
+    <link rel="stylesheet" href="../lib/verify.min.js">
 </head>
 
 <body>
@@ -17,8 +19,7 @@
             </a>
             <div class="logo-title">欢迎注册</div>
 
-            <div class="have-account">已有账号？ <a
-                    href="https://passport.jd.com/new/login.aspx?ReturnUrl=http://www.jd.com">请登录&gt;</a></div>
+            <div class="have-account">已有账号？ <a href="login.html">请登录&gt;</a></div>
 
         </div>
     </div>
@@ -46,6 +47,7 @@
         <div class="main ">
             <div class="reg-form">
                 <form action="" id="register-form" method="POST">
+                    <!-- 1.验证手机号 -->
                     <div id="step1-wrap">
                         <div class="item-phone-wrap">
                             <div class="form-item form-item-phone">
@@ -59,18 +61,27 @@
                                     <i class="i-cancel"></i>
                                 </div>
                                 <div class="input-tip">
-                                    <span></span>
+                                    <span id="form-phone-error" class="error">
+
+                                    </span>
                                 </div>
                             </div>
                         </div>
                         <div class="item-getcode-wrap">
+                            <!--  点击拖拽验证 -->
                             <div class="form-item form-item-getcode" clstag="pageclick|keycount|reg_puser_201804031|7">
-                                点击按钮进行验证 <div id="slideAuthCode" class="JDValidate-wrap"></div>
+                                点击按钮进行验证
+                                <!--  拖拽 -->
+                                <div class="slide-authCode-wraper" id="mpanel" style="display:block">
+                                    
+                                </div>
                             </div>
                             <div class="input-tip">
                                 <span></span>
                             </div>
                         </div>
+
+
                         <div class="item-phonecode-wrap">
                             <div class="form-item form-item-phonecode">
                                 <div class="phonecode-left">
@@ -93,8 +104,8 @@
                         <div id="step1-next" class="btn-register" clstag="pageclick|keycount|reg_puser_201804031|3">下一步
                         </div>
                     </div>
-                    <!-- 填写信息页 -->
-                    <div id="step2-wrap">
+                    <!-- 2.填写信息页 -->
+                    <div id="step2-wrap" style="display:none">
                         <div class="form-item form-item-account" id="form-item-account">
                             <label>用　户　名</label>
                             <input type="text" id="form-account" name="regName" class="field" autocomplete="off"
@@ -164,5 +175,42 @@
                 </form>
             </div>
 </body>
+<script src="../lib/jquery-1.10.1.min.js"></script>
+<script src="../lib/verify.min.js"></script>
+<script src="../js/regsit.js"></script>
+<script>
+    (function () {
+        reg();
+        $('#mpanel').slideVerify({
+            type: 2,   //类型
+            vOffset: 2,  //误差量，根据需求自行调整
+            vSpace: 5, //间隔
+            imgName: ['1.jpg', '2.jpg'],
+            imgSize: {
+                width: '365px',
+                height: '140px',
+            },
+            blockSize: {
+                width: '40px',
+                height: '40px',
+            },
+            barSize: {
+                width: '284px',
+                height: '40px',
+            },
+            ready: function () {
+            },
+            success: function () {
+                alert('验证成功，添加你自己的代码！');
+                //......后续操作
+            },
+            error: function () {
+                //              alert('验证失败！');
+            }
+
+        });
+    })()
+
+</script>
 
 </html>

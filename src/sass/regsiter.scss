@@ -179,6 +179,22 @@ html,body{
                 height: 27px;
                 font-size: 12px;
                 padding-top: 5px;
+                .error,.orange, .phone-bind-tip {
+                    color: #f91;
+                }
+                .error {
+                    display: none;
+                }
+                span i {
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    vertical-align: text-top;
+                    margin-right: 8px;
+                }
+                .i-error {
+                    background-position: -17px -100px;
+                }
         }
     }    
     .field {
@@ -190,6 +206,9 @@ html,body{
         padding-left: 20px;
         padding-top: 16px;
     }
+    .checkRegDialog .ico, .form-item-valid .i-status, .i-company, .i-def, .i-error, .i-error1, .i-global, .i-info, .i-pwd-medium, .i-pwd-strong, .i-pwd-weak, .i-suc {
+        background: url(../img/Reg-icon.png) no-repeat;
+    }
     .form-agreen .agree-tip i, .form-agreen .sim-checkbox, .form-item .i-cancel, .reg-other .reg-ohter-icon {
         background: url(../img/reg-icon2.png) no-repeat;
     }
@@ -199,7 +218,47 @@ html,body{
         font-size: 14px;
         color: #333;
         cursor: pointer;
-        z-index: 2;    
+        z-index: 2;  
+        .slide-authCode-wraper {
+            display: none;
+            line-height: 1.5;
+            text-align: left;
+            position: absolute;
+            left: 0;
+            bottom: 65px;
+            font-family: "Microsoft YaHei";
+            background-color: #fff;
+            cursor: default;
+            z-index: 110;
+            box-shadow: 0 0 2px 2px #eee;
+            border: 1px solid #eee;
+            width: 364px;
+            height: 216.5px;
+            padding: 12px 12px 12px 20px;
+            /* .arrow {
+                display: block;
+                position: absolute;
+                background-image: url(../img/reg-tips.gif);
+                background-repeat: no-repeat;
+                width: 16px;
+                height: 8px;
+                background-position: 0 -8px;
+                overflow: hidden;
+                bottom: -8px;
+                left: 190px;
+            }
+            .close {
+                cursor: pointer;
+                z-index: 100;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                display: block;
+                width: 12px;
+                height: 12px;
+                background-image: url(../img/reg-x.png);
+            } */
+        }
     } 
     .input-tip {
         color: #c5c5c5;

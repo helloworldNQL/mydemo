@@ -256,6 +256,146 @@ body {
                 }
                  
             }
+            .qrcode-login {
+                display: block;
+                visibility: visible;
+                width: 306px;
+                padding: 20px 18px 20px 20px;
+                text-align: center;
+                .qrcode-error-2016 {
+                    left: 0px;
+                    display: none;
+                    font-size: 14px;
+                    color: #fbfbfb;
+                    margin-top: 65px;
+                    position: relative;
+                    z-index: 1;
+                    .qrcode-error-mask {
+                        display: block;
+                        position: absolute;
+                        width: 170px;
+                        background: #000;
+                        filter: alpha(opacity=60);
+                        -moz-opacity: .6;
+                        opacity: .6;
+                        height: 163px;
+                        left: 66px;
+                        z-index: 9;
+                        top: 0;
+                        text-align: center;
+                        line-height: 100px;
+                    }
+                    .err-cont {
+                        position: absolute;
+                        left: 0;
+                        top: 55px;
+                        width: 100%;
+                        z-index: 19;
+                        font-weight: 700;
+                    }
+                    .refresh-btn {
+                        display: block;
+                        background: #e4393c;
+                        width: 80px;
+                        height: 30px;
+                        position: absolute;
+                        top: 95px;
+                        left: 113px;
+                        line-height: 30px;
+                        opacity: 1;
+                        z-index: 19;
+                        color: #fbfbfb;
+                        text-decoration: none;
+                    }
+                }
+                .qrcode-main {
+                    position: relative;
+                    height: 168px;
+                    margin-top: 55px;
+                    .qrcode-img {
+                        border: 1px solid #f4f4f4;
+                        padding: 8px;
+                        width: 155px;
+                        position: absolute;
+                        left: 64px;
+                        img {
+                            width: 147px;
+                            height: 147px;
+                        }
+                        .qrcode-error02 {
+                            padding: 30px 0;
+                        }
+                    }
+                    .qrcode-help {
+                        display: none;
+                        position: absolute;
+                        right: -18px;
+                        top: -2px;
+                        width: 141px;
+                        height: 168px;
+                        background: url(../img/phone-orange.png) no-repeat;
+                        z-index: 99;
+                    }
+                }
+                .qrcode-panel {
+                    width: 257px;
+                    margin: 18px auto 14px;
+                    text-align: center;
+                    li.fore1 {
+                        border: 0;
+                    }
+                    li {
+                        display: inline-block;
+                        *display: inline;
+                        padding: 0 0 0 5px;
+                        margin: 0 5px 0 0;
+                    }
+                }
+                .qr-coagent {
+                    background-color: #fff;
+                    font-family: "microsoft yahei";
+                    color: #999;
+                    border: none;
+                    padding: 0;
+                    line-height: 25px;
+                    margin-left: 40px;
+                    .coagent li {
+                        float: left;
+                    }
+                    li {
+                        text-align: left;
+                        position: relative;
+                        margin-right: 18px;
+                        b {
+                            width: 25px;
+                            height: 25px;
+                            display: block;
+                            background: url(../img/qr-coagent.png) no-repeat;
+                            margin: 0 auto;
+                            position: absolute;
+                            left: 0;
+                        }
+                        em {
+                            padding-left: 32px;
+                            *display: inline-block;
+                            _display: inline;
+                        }
+                        .faster {
+                            background-position: -27px;
+                        }
+                        .more-safe {
+                            background-position: -54px;
+                        }
+                    }
+                }
+            }
+            .coagent ul:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
             .coagent {
                 padding-left: 20px;
                 padding-right: 20px;

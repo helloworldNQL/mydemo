@@ -1,0 +1,24 @@
+.w {
+  width: 1210px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #F1F1F1;
+  z-index: 99;
+  position: relative;
+  font-size: 12px;
+}
+.header li {
+  float: left;
+  height: 30px;
+  padding: 0 2px;
+}
+.header li a {
+  color: #9A949B;
+}
+
+/*# sourceMappingURL=top.css.map */

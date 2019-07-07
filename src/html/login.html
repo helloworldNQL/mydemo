@@ -41,13 +41,13 @@
                         </div>
                     </div>
                     <div class="login-tab login-tab-l">
-                        <a href=""> 扫码登录</a>
+                        <a href="###"> 扫码登录</a>
                     </div>
                     <div class="login-tab login-tab-r">
-                        <a href="">账户登录</a>
+                        <a href="###">账户登录</a>
                     </div>
                     <!-- 账号登录 -->
-                    <div class="login-box">
+                    <div class="login-box" style="display:none">
                         <div class="mt tab-h">
                         </div>
                         <div class="msg-wrap">
@@ -99,7 +99,43 @@
                         </div>
 
                     </div>
-
+                    <!-- 扫描登录 -->
+                    <div class="qrcode-login">
+                        <div class="mc">
+                            <div class="qrcode-error-2016">
+                                <div class="qrcode-error-mask">
+                                </div>
+                                <p class="err-cont">服务器出错</p>
+                                <a href="javascript:void(0)" class="refresh-btn"
+                                    clstag="pageclick|keycount|login_pc_201804112|11">刷新</a>
+                            </div>
+                            <div class="qrcode-main">
+                                <div class="qrcode-img">
+                                    <img src="../img/loginshow.png" alt="">
+                                </div>
+                                <div class="qrcode-help" style="display: none; "></div>
+                            </div>
+                            <div class="qrcode-panel">
+                                <ul>
+                                    <li class="fore1">
+                                        <span>打开</span>
+                                        <a href="/uc/links?tag=apps" target="_blank"
+                                            clstag="pageclick|keycount|201607144|9">
+                                            <span class="red">手机京东</span></a>
+                                    </li>
+                                    <li>扫描二维码</li>
+                                </ul>
+                            </div>
+                            <div class="coagent qr-coagent" id="qrCoagent">
+                                <ul>
+                                    <li><b></b><em>免输入</em></li>
+                                    <li><b class="faster"></b><em>更快&nbsp;</em></li>
+                                    <li><b class="more-safe"></b><em>更安全</em></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- qq -->
                     <div class="coagent" id="kbCoagent">
                         <ul>
                             <li>
@@ -112,7 +148,7 @@
                             </li>
                             <li class="extra-r">
                                 <div>
-                                    <div class="regist-link"><a href="" target="_blank"><b></b>立即注册</a></div>
+                                    <div class="regist-link"><a href="regsiter.html" target="_blank"><b></b>立即注册</a></div>
                                 </div>
                             </li>
                         </ul>
@@ -180,12 +216,15 @@
     </div>
 
 </body>
-<script src="../js/jquery-1.10.1.min.js"></script>
-<script src="../js/jquery.cookie.js"></script>
+<script src="../lib/jquery-1.10.1.min.js"></script>
+<script src="../lib/jquery.cookie.js"></script>
 <script src="../js/login.js"></script>
 <script>
-    (function(){
+    (function () {
+
         login();
+
     })();
 </script>
+
 </html>

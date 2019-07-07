@@ -1,0 +1,165 @@
+.w {
+    width: 1210px;
+}
+a {
+    color: #666;
+    text-decoration: none;
+    outline: 0 none;
+}
+.headWrapper {
+    min-width: 1210px;
+    height: 535px;
+    overflow: hidden;
+    .cj-focus {
+        position: relative;
+        min-width: 1210px;
+        height: 525px;
+        overflow: visible;
+        transition: all .2s;
+        .slide {
+            width: 726px;
+            height: 369px;
+            position: relative;
+            transition: all .2s;
+            overflow: hidden;
+            margin-left: 242px;
+        }
+        .swiper-slide {
+            width: 726px;
+            font-size: 60px;
+            text-align: center;
+            line-height: 300px;
+            img{
+                width: 726px;
+                height: 369px;
+            }
+        }
+        .swiper-button-next{
+            width: 65px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #f1f1f1;
+            opacity: 0.5;
+            right: -15px;
+        }
+        .swiper-button-prev{
+            width: 65px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #f1f1f1;
+            opacity: 0.5;
+            left: -15px;
+        }
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            margin-right: 8px;
+            cursor: pointer;
+            background: #f1f1f1;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background: #863177;
+        }
+        .saleList {
+            width: 726px;
+            margin-left: 242px;
+            ul {
+                width: 105%;
+                li {
+                    float: left;
+                    background: #fff;
+                    a {
+                        display: none;
+                        height: 156px;
+                        border-right: 1px solid #ebe2eb;
+                    }
+                }
+            }
+        }
+        .slideRight {
+            position: absolute;
+            width: 242px;
+            height: 525px;
+            top: -369px;
+            right: 0;
+            border-bottom: 1px solid #f7f5f7;
+            .sr-service {
+                width: 242px;
+                height: 312px;
+                overflow: hidden;
+                ul {
+                    width: 750px;
+                    margin-left: -242px;
+                    li {
+                        float: left;
+                        width: 242px;
+                        height: 312px;
+                        background: #fff;
+                        a {
+                            display: block;
+                            width: 242px;
+                            height: 312px;
+                            .tit {
+                                display: block;
+                                font-size: 18px;
+                                color: #312b30;
+                                margin: 20px 0 6px;
+                            }
+                            .f-tit {
+                                display: block;
+                                color: #9a949b;
+                            }
+                            img {
+                                display: block;
+                                width: 159px;
+                                height: 159px;
+                                margin: 52px auto 0;
+                            }
+                        }
+                    }
+                    span {
+                        text-align: center;
+                    }
+                }
+                .control {
+                    position: absolute;
+                    width: 70px;
+                    top: 90px;
+                    left: 50%;
+                    margin-left: -30px;
+                    text-align: center;
+                    cursor: default;
+                    a.curr {
+                        background-position: 0 -24px;
+                    }
+                    a {
+                        display: inline-block;
+                        // *display: inline;
+                        // *zoom: 1;
+                        // background: url(i/slideV2.png) -20px -24px no-repeat;
+                        width: 10px;
+                        height: 10px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .baitiao {
+                position: absolute;
+                width: 242px;
+                height: 194px;
+                background: #fff;
+                padding-top: 20px;
+                .baitiao {
+                    position: absolute;
+                    width: 242px;
+                    height: 194px;
+                    background: #fff;
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,165 @@
+.w {
+  width: 1210px;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+  outline: 0 none;
+}
+
+.headWrapper {
+  min-width: 1210px;
+  height: 535px;
+  overflow: hidden;
+}
+.headWrapper .cj-focus {
+  position: relative;
+  min-width: 1210px;
+  height: 525px;
+  overflow: visible;
+  transition: all .2s;
+}
+.headWrapper .cj-focus .slide {
+  width: 726px;
+  height: 369px;
+  position: relative;
+  transition: all .2s;
+  overflow: hidden;
+  margin-left: 242px;
+}
+.headWrapper .cj-focus .swiper-slide {
+  width: 726px;
+  font-size: 60px;
+  text-align: center;
+  line-height: 300px;
+}
+.headWrapper .cj-focus .swiper-slide img {
+  width: 726px;
+  height: 369px;
+}
+.headWrapper .cj-focus .swiper-button-next {
+  width: 65px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  opacity: 0.5;
+  right: -15px;
+}
+.headWrapper .cj-focus .swiper-button-prev {
+  width: 65px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  opacity: 0.5;
+  left: -15px;
+}
+.headWrapper .cj-focus .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 8px;
+  cursor: pointer;
+  background: #f1f1f1;
+  opacity: 1;
+}
+.headWrapper .cj-focus .swiper-pagination-bullet-active {
+  background: #863177;
+}
+.headWrapper .cj-focus .saleList {
+  width: 726px;
+  margin-left: 242px;
+}
+.headWrapper .cj-focus .saleList ul {
+  width: 105%;
+}
+.headWrapper .cj-focus .saleList ul li {
+  float: left;
+  background: #fff;
+}
+.headWrapper .cj-focus .saleList ul li a {
+  display: none;
+  height: 156px;
+  border-right: 1px solid #ebe2eb;
+}
+.headWrapper .cj-focus .slideRight {
+  position: absolute;
+  width: 242px;
+  height: 525px;
+  top: -369px;
+  right: 0;
+  border-bottom: 1px solid #f7f5f7;
+}
+.headWrapper .cj-focus .slideRight .sr-service {
+  width: 242px;
+  height: 312px;
+  overflow: hidden;
+}
+.headWrapper .cj-focus .slideRight .sr-service ul {
+  width: 750px;
+  margin-left: -242px;
+}
+.headWrapper .cj-focus .slideRight .sr-service ul li {
+  float: left;
+  width: 242px;
+  height: 312px;
+  background: #fff;
+}
+.headWrapper .cj-focus .slideRight .sr-service ul li a {
+  display: block;
+  width: 242px;
+  height: 312px;
+}
+.headWrapper .cj-focus .slideRight .sr-service ul li a .tit {
+  display: block;
+  font-size: 18px;
+  color: #312b30;
+  margin: 20px 0 6px;
+}
+.headWrapper .cj-focus .slideRight .sr-service ul li a .f-tit {
+  display: block;
+  color: #9a949b;
+}
+.headWrapper .cj-focus .slideRight .sr-service ul li a img {
+  display: block;
+  width: 159px;
+  height: 159px;
+  margin: 52px auto 0;
+}
+.headWrapper .cj-focus .slideRight .sr-service ul span {
+  text-align: center;
+}
+.headWrapper .cj-focus .slideRight .sr-service .control {
+  position: absolute;
+  width: 70px;
+  top: 90px;
+  left: 50%;
+  margin-left: -30px;
+  text-align: center;
+  cursor: default;
+}
+.headWrapper .cj-focus .slideRight .sr-service .control a.curr {
+  background-position: 0 -24px;
+}
+.headWrapper .cj-focus .slideRight .sr-service .control a {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+.headWrapper .cj-focus .slideRight .baitiao {
+  position: absolute;
+  width: 242px;
+  height: 194px;
+  background: #fff;
+  padding-top: 20px;
+}
+.headWrapper .cj-focus .slideRight .baitiao .baitiao {
+  position: absolute;
+  width: 242px;
+  height: 194px;
+  background: #fff;
+  padding-top: 20px;
+}
+
+/*# sourceMappingURL=ind.css.map */
