@@ -8,7 +8,7 @@
     <title>个人注册</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/regsiter.css">
-    <link rel="stylesheet" href="../lib/verify.min.js">
+    <link rel="stylesheet" href="../css/jigsaw.css">
 </head>
 
 <body>
@@ -72,7 +72,7 @@
                             <div class="form-item form-item-getcode" clstag="pageclick|keycount|reg_puser_201804031|7">
                                 点击按钮进行验证
                                 <!--  拖拽 -->
-                                <div class="slide-authCode-wraper" id="mpanel" style="display:block">
+                                <div class="slide-authCode-wraper" id="mpanel">
                                     
                                 </div>
                             </div>
@@ -117,10 +117,10 @@
                         <div class="input-tip">
                             <span></span>
                         </div>
-                        <div class="form-item">
+                        <div class="form-item  form-item1">
                             <label>设 置 密 码</label>
                             <input autocomplete="off" type="password" name="pwd" id="form-pwd" class="field"
-                                maxlength="20" placeholder="建议使用两种或两种以上字符组合"
+                                maxlength="20" placeholder="请输入6-20个字符"
                                 default="<i class='i-def'></i>建议使用字母、数字和符号两种及以上的组合，6-20个字符">
                             <i class="i-status"></i>
                             <i class="i-cancel"></i>
@@ -128,7 +128,7 @@
                         <div class="input-tip">
                             <span></span>
                         </div>
-                        <div class="form-item">
+                        <div class="form-item form-item2">
                             <label>确 认 密 码</label>
                             <input type="password" name="pwdRepeat" id="form-equalTopwd" class="field"
                                 placeholder="请再次输入密码" default="<i class='i-def'></i>请再次输入密码">
@@ -139,7 +139,7 @@
                             <span></span>
                         </div>
                         <div class="item-email-wrap">
-                            <div class="form-item">
+                            <div class="form-item form-item3">
                                 <label>邮 箱 验 证</label>
                                 <input type="text" name="email" id="form-email" class="field" autocomplete="off"
                                     maxlength="50" placeholder="请输入邮箱" default="<i class='i-def'></i>验证完成后，你可以使用该邮箱登录">
@@ -165,8 +165,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div><button class="btn-register" id="form-register"
-                                clstag="pageclick|keycount|reg_puser_201804031|18">立即注册</button></div>
+                        <div><button class="btn-register" id="form-register">立即注册</button></div>
                         <div class="input-tip">
                             <span></span>
                         </div>
@@ -176,39 +175,12 @@
             </div>
 </body>
 <script src="../lib/jquery-1.10.1.min.js"></script>
-<script src="../lib/verify.min.js"></script>
+<script src="../lib/jigsaw.js"></script>
 <script src="../js/regsit.js"></script>
 <script>
     (function () {
         reg();
-        $('#mpanel').slideVerify({
-            type: 2,   //类型
-            vOffset: 2,  //误差量，根据需求自行调整
-            vSpace: 5, //间隔
-            imgName: ['1.jpg', '2.jpg'],
-            imgSize: {
-                width: '365px',
-                height: '140px',
-            },
-            blockSize: {
-                width: '40px',
-                height: '40px',
-            },
-            barSize: {
-                width: '284px',
-                height: '40px',
-            },
-            ready: function () {
-            },
-            success: function () {
-                alert('验证成功，添加你自己的代码！');
-                //......后续操作
-            },
-            error: function () {
-                //              alert('验证失败！');
-            }
-
-        });
+        
     })()
 
 </script>

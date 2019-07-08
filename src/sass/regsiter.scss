@@ -196,11 +196,29 @@ html,body{
                     background-position: -17px -100px;
                 }
         }
-    }    
+    } 
+    .mailcode-left, .phonecode-left {
+        position: relative;
+        float: left;
+        border: solid 1px #ddd;
+    }   
+    .form-item .mailcode, .form-item .phonecode {
+        width: 152px;
+    }
+    .btn-mailcode, .btn-phonecode {
+        float: left;
+        width: 118px;
+        height: 52px;
+        border: 1px solid #ddd;
+        border-left: none;
+        background: #fff;
+        color: #333;
+        padding: 0;
+    }
     .field {
         border: 0 none;
         font-size: 14px;
-        width: 190px;
+        width: 220px;
         height: 23px;
         padding-bottom: 11px;
         padding-left: 20px;

@@ -166,10 +166,25 @@ html, body {
         margin-right: 8px; }
       .main .item-phone-wrap .input-tip .i-error {
         background-position: -17px -100px; }
+  .main .mailcode-left, .main .phonecode-left {
+    position: relative;
+    float: left;
+    border: solid 1px #ddd; }
+  .main .form-item .mailcode, .main .form-item .phonecode {
+    width: 152px; }
+  .main .btn-mailcode, .main .btn-phonecode {
+    float: left;
+    width: 118px;
+    height: 52px;
+    border: 1px solid #ddd;
+    border-left: none;
+    background: #fff;
+    color: #333;
+    padding: 0; }
   .main .field {
     border: 0 none;
     font-size: 14px;
-    width: 190px;
+    width: 220px;
     height: 23px;
     padding-bottom: 11px;
     padding-left: 20px;
