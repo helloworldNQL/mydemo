@@ -374,6 +374,14 @@ ins {
     .product-intro .itemInfo-wrap .dd {
       margin-left: 52px;
       color: #000; }
+      .product-intro .itemInfo-wrap .dd .item {
+        float: left; }
+    .product-intro .itemInfo-wrap .dd::after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
     .product-intro .itemInfo-wrap .d-tip {
       margin-left: 7px;
       color: #6286ca; }

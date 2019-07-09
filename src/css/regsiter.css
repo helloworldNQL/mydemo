@@ -266,5 +266,34 @@ html, body {
     font-size: 16px;
     font-family: "Microsoft YaHei","Hiragino Sans GB";
     cursor: pointer; }
+  .main #step3-wrap {
+    position: relative; }
+    .main #step3-wrap h2 {
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      color: #58bc58; }
+    .main #step3-wrap span {
+      position: absolute;
+      top: 35px;
+      left: 160px;
+      display: block;
+      width: 80px;
+      height: 77px;
+      background: url(../img/Reg-icon.png) no-repeat -95px -45px; }
+    .main #step3-wrap a {
+      margin-top: 120px;
+      display: block;
+      width: 100%;
+      height: 54px;
+      margin-right: 10px;
+      line-height: 54px;
+      text-align: center;
+      color: #fff;
+      background: #58bc58;
+      border: 0;
+      font-size: 16px;
+      font-family: "Microsoft YaHei","Hiragino Sans GB";
+      cursor: pointer; }
 
 /*# sourceMappingURL=regsiter.css.map */

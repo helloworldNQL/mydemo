@@ -258,17 +258,16 @@ html,body{
                             background: #fff;
                             position: absolute;
                             left: 232px;
-                            // top: 0;
-                            // display: block;
-                            border: 1px solid rgb(223, 106, 223);
+                            top: 0;
+                            display: block;
                             border-left: 0;
-                            /*  .sub-list{
+                             .sub-list{
                                 display: inline-block;
                                 // *display: inline;
                                 // *zoom: 1;
                                 vertical-align: top;
                                 width: 350px;
-                                min-height: 139px;
+                                min-height: 120px;
                                 max-height: 508px;
                                 margin: 14px 0 0 39px;
                                 position: relative;
@@ -301,6 +300,29 @@ html,body{
                                         }
                                     }
                                 }
+                                .slBlock {
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    max-height: 100px;
+                                    dt.liTitle {
+                                        margin-bottom: 14px;
+                                        line-height: 18px;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        color: #312B30;
+                                    }
+                                    dd.liItem {
+                                        float: left;
+                                        line-height: 12px;
+                                        margin-bottom: 9px;
+                                        display: block;
+                                        font-size: 12px;
+                                        color: #312B30;
+                                        padding-right: 9px;
+                                        margin-right: 9px;
+                                        border-right: 1px solid #DEDEDE;
+                                    }
+                                }
                                 .split {
                                     border-top: 1px solid #E3E2E3;
                                     height: 0;
@@ -318,7 +340,7 @@ html,body{
                                 overflow: hidden;
                                 z-index: 1;
                                 
-                            } */
+                            }
                         }
                         
                     }

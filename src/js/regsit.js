@@ -18,6 +18,7 @@ function reg() {
         }
     })
 }
+let tel = null;
 function pic() {
     jigsaw.init(document.getElementById('mpanel'), function () {
         $('#mpanel').empty();
@@ -33,11 +34,8 @@ function pic() {
             async: true,
             success: function (str) {
                 //返回验证码
-                console.log(str.phonecode);
-                if ($('#phoneCode').val == str.phonecode) {
-                    //验证码正确才可以点击下一步
+                telCode(str.phonecode);
 
-                }
             }
         });
 
@@ -46,13 +44,22 @@ function pic() {
         pic();
     });
 }
-
-$('#step1-next').click(function () {
-    $('#step1-wrap').hide();
-    $('#step2-wrap').show();
-    $('.person-pro-line1').css('background-position-y', -130);
-    $('.person-pro-step2').find('.step-index').css({ 'background-position-x': 0, 'color': '#fff' });
-});
+//验证验证码
+function telCode(code) {
+    //验证码正确才可以点击下一步
+    $('#step1-next').click(function () {
+        if ($('#phoneCode').val() == code) {
+            $('#step1-wrap').hide();
+            $('#step2-wrap').show();
+            $('.person-pro-line1').css('background-position-y', -130);
+            $('.person-pro-step2').find('.step-index').css({ 'background-position-x': 0, 'color': '#fff' });
+            tel = $('#form-phone').val();
+        } else {
+            console.log(code);
+            alert('您的验证码不正确,请重新输入');
+        }
+    });
+}
 //填写信息
 let user = false;
 let pwd = false;
@@ -141,11 +148,24 @@ function email() {
     });
 }
 //点击注册
-$('.btn-register').click(function(){
-    console.log('why');
-    if(user && pwd && agin && eml){
-        console.log('ok');
-    }else{
-        console.log('no');
+$('#form-register').click(function () {
+    if (user && pwd && agin && eml) {
+        console.log(tel);
+        $.ajax({
+            type: 'post',
+            url: '../api/reg2.php',
+            data: 'username=' + $('#form-account').val() + '&pwd=' + $('#form-pwd').val() + '&tel=' + tel + '&email=' + $('#form-email').val(),
+            success: function (str) {
+                // console.log(str);
+                let arr = JSON.parse(str);
+                console.log(arr);
+            }
+        });
+        $('#step2-wrap').hide();
+        $('#step3-wrap').show();
+        $('.person-pro-line2').css('background-position-y', -130);
+        $('.person-pro-step3').find('.step-index').css({ 'background-position-x': 0, 'color': '#fff' });
+    } else {
+        alert('请完善正确的信息');
     }
-})
+});

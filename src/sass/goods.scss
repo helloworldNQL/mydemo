@@ -445,6 +445,16 @@ ins {
         .dd {
             margin-left: 52px;
             color: #000;
+            .item{
+                float: left;
+            }
+        }
+        .dd::after{
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
         }
         .d-tip {
             margin-left: 7px;
