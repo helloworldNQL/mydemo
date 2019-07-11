@@ -1,7 +1,7 @@
 //数据内容存放盒子$('.dd-inner')
 
 //数据渲染
-function init() {
+let init = new Promise(function (resolve) {
     $.ajax({
         type: 'post',
 
@@ -10,29 +10,40 @@ function init() {
         success: function (str) {
             let arr = JSON.parse(str);
             // console.log(arr.data);
-            res = sliceArr(arr.data, 3);
-            let size = 42;
-            let html = res.map(function (item) {
-                size -= 43;
-                return `<li class="item" data-id='${item[0].id}'>
-                <h3><i class="i-nav" style="background-position:-28px ${size}px;"></i>
-                <a href="" class="link">${item[0].Cname}</a><div class="arrow-right">
-                </div></h3>
-                <h4><a href="">${item[1].Cname}</a></h4>
-                <h4><a href="">${item[2].Cname}</a></h4>
-            </li>`;
-            }).join('');
-            $('.dd-inner').html(html);
+            resolve(arr.data);
+
 
         }
     });
-
-}
-
+});
+init.then(function (data) {
+    res = sliceArr(data, 3);
+    let size = 42;
+    let html = res.map(function (item) {
+        size -= 43;
+        // console.log(item[0]);
+        return `<li class="item" data-id='${item[0].id}'>
+                <h3><i class="i-nav" style="background-position:-28px ${size}px;"></i>
+                <a href="goodslist.html?category=${item[0].Cname}" target="_blank" class="link" >${item[0].Cname}</a><div class="arrow-right">
+                </div></h3>
+                <h4><a href="###">${item[1].Cname}</a></h4>
+                <h4><a href="###">${item[2].Cname}</a></h4>
+                <div class='sub-menu'>
+                    <div class="sub-list">
+                    </div>
+                    <div class='sub-right'>
+                    </div>
+                </div>
+            </li>`;
+    }).join('');
+    $('.dd-inner').html(html);
+});
+let simg = null;
 //鼠标划过特效 mouseover
-$('.dd-inner').on('click', '.item', function () {
+$('.dd-inner').on('mouseover', '.item', function () {
     let pid = this.dataset.id;
     let ddthis = this;
+    
     $.ajax({
         type: 'post',
         url: '../api/nav3.php',
@@ -40,47 +51,53 @@ $('.dd-inner').on('click', '.item', function () {
         asyn: false,
         success: function (str) {
             let arr = JSON.parse(str);
-            // console.log(arr.img);
-            show(arr.data,arr.img);
+            show(arr.data, arr.img);
         }
     });
-    function show(data,img) {
+    function show(data, img) {
+        //文字部分
         let html = data.map(function (item) {
-            let  dd = item.content;
+            let dd = item.content;
             let arr = dd.split(',');
-            let bimg ='..' + img[0].navBimg.slice(6) ;
-            //小图
-            let arrSimg = img[0].navSimg.split(',');
-            // console.log(arrSimg);
-            let strImg = arrSimg.map(function(item){
-                item = '..' + item.slice(6);
-                return "<li><img src='"+ item +"' alt=''></li>"
-            });
-            console.log(strImg);
-            let str = arr.map(function(item){
-                return '<dd class="liItem ">'+ item +'</dd>';
+            let str = arr.map(function (item) {
+                return '<dd class="liItem ">' + item + '</dd>';
             })
-            return ` <div class="sub-list">
+            return ` 
                         <dl class="slBlock">
                             <dt class="liTitle">${item.Cname}</dt>
                             ${str}                               
                         </dl>
                         <div class="split">
                         </div> 
-                    </div>
-                    <div class="sub-right">
-                        <ul>
-                            ${strImg}
-                        </ul>
-                        <img src="${bimg}" alt="">
-                    </div>
+                    
+                    
                     `;
         }).join('');
-        $(ddthis).append("<div class='sub-menu'></div>");
-        $(ddthis).find($('.sub-menu')).html(html);
+        $('.sub-menu').find($('.sub-list')).empty();
+        $(ddthis).find($('.sub-list')).html(html);
+       // console.log($(ddthis).find($('.sub-menu')).html(html));
+        //图片部分
+        //小图
+        let arrSimg = img[0].navSimg.split(',');
+        let strImg = arrSimg.map(function (item) {
+            item = '..' + item.slice(6);
+            return "<li><img src='" + item + "' alt=''></li>"
+        }).join('');
+        let bimg = '..' + img[0].navBimg.slice(6);
+        $(ddthis).find($('.sub-right')).html("<ul class='sub-brands clearfix'>" + strImg + "</ul>" + "<img class='sub-ad' src='" + bimg + "' alt=''>");
+        
     }
 });
-
+//点击分类展开
+let isok = true;
+$('.dt').click(function(){
+    if(isok){
+        $('.dd').show(); 
+    }else{
+        $('.dd').hide();
+    }
+    isok = !isok;
+});
 
 //切割数组
 function sliceArr(array, size) {

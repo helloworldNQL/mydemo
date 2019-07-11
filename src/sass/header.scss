@@ -197,7 +197,7 @@ html,body{
                 .dd-inner {
                     padding: 1px 0 0 10px;
                     .item {
-                        position: relative;
+                        // position: relative;
                         z-index: 1;
                         height: 33px;
                         color: #fff;
@@ -252,13 +252,13 @@ html,body{
                             }
                         }
                        .sub-menu{
-                            // display: none;
+                            display: none;
                             width: 725px;
                             height: 523px;
                             background: #fff;
                             position: absolute;
-                            left: 232px;
-                            top: 0;
+                            left: 242px;
+                            top: 43px;
                             display: block;
                             border-left: 0;
                              .sub-list{
@@ -267,7 +267,7 @@ html,body{
                                 // *zoom: 1;
                                 vertical-align: top;
                                 width: 350px;
-                                min-height: 120px;
+                                min-height: 100px;
                                 max-height: 508px;
                                 margin: 14px 0 0 39px;
                                 position: relative;
@@ -331,7 +331,7 @@ html,body{
                                 }
                             }
                             .sub-right {
-                                position: relative;
+                                position: absolute;
                                 display: inline-block;
                                 width: 280px;
                                 height: 524px;
@@ -339,7 +339,27 @@ html,body{
                                 margin-left: 50px;
                                 overflow: hidden;
                                 z-index: 1;
-                                
+                                top: 0;
+                                .sub-brands {
+                                    position: relative;
+                                    z-index: 1;
+                                    margin-left: 10px;
+                                    li {
+                                        float: left;
+                                        margin: 30px 33px 0 0;
+                                        img {
+                                            width: 100px;
+                                            height: 40px;
+                                        }
+                                    }
+                                }
+                                .sub-ad {
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 255px;
+                                    height: 230px;
+                                }
                             }
                         }
                         

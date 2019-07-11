@@ -15,6 +15,7 @@
 
 <body>
     <div id="crumb-wrap" class="crumb-wrap"></div>
+
     <div id="nav-shop">
         <div class="w">
             <div class="shopHeaderArea">
@@ -484,6 +485,7 @@
             </div>
         </div>
     </div>
+    
     <div class="w hide">
         <div id="fittings" class="fittings ETab hide">
             <div class="tab-main large">
@@ -1053,13 +1055,16 @@
 <script src="../lib/magnifier.js"></script>
 <script src="../lib/jquery.citys.js"></script>
 <script src="http://pv.sohu.com/cityjson"></script>
+<script src="../lib/common.js"></script>
 <script src="../js/goods.js"></script>
 <script>
     (function () {
-        goods();
+        gShow();
+        // goods();
         if (returnCitySN) {
-        $('#location').citys({ code: returnCitySN['cid'] });
-    }
+            $('#location').citys({ code: returnCitySN['cid'] });
+        }
     })();
 </script>
+
 </html>

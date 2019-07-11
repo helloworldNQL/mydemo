@@ -174,7 +174,6 @@ html, body {
         #nav .w #categorys .dd .dd-inner {
           padding: 1px 0 0 10px; }
           #nav .w #categorys .dd .dd-inner .item {
-            position: relative;
             z-index: 1;
             height: 33px;
             color: #fff;
@@ -222,19 +221,20 @@ html, body {
                 color: #C0B6C2;
                 opacity: .91; }
             #nav .w #categorys .dd .dd-inner .item .sub-menu {
+              display: none;
               width: 725px;
               height: 523px;
               background: #fff;
               position: absolute;
-              left: 232px;
-              top: 0;
+              left: 242px;
+              top: 43px;
               display: block;
               border-left: 0; }
               #nav .w #categorys .dd .dd-inner .item .sub-menu .sub-list {
                 display: inline-block;
                 vertical-align: top;
                 width: 350px;
-                min-height: 120px;
+                min-height: 100px;
                 max-height: 508px;
                 margin: 14px 0 0 39px;
                 position: relative;
@@ -288,14 +288,31 @@ html, body {
                   width: 350px;
                   margin: 14px 0 19px; }
               #nav .w #categorys .dd .dd-inner .item .sub-menu .sub-right {
-                position: relative;
+                position: absolute;
                 display: inline-block;
                 width: 280px;
                 height: 524px;
                 vertical-align: top;
                 margin-left: 50px;
                 overflow: hidden;
-                z-index: 1; }
+                z-index: 1;
+                top: 0; }
+                #nav .w #categorys .dd .dd-inner .item .sub-menu .sub-right .sub-brands {
+                  position: relative;
+                  z-index: 1;
+                  margin-left: 10px; }
+                  #nav .w #categorys .dd .dd-inner .item .sub-menu .sub-right .sub-brands li {
+                    float: left;
+                    margin: 30px 33px 0 0; }
+                    #nav .w #categorys .dd .dd-inner .item .sub-menu .sub-right .sub-brands li img {
+                      width: 100px;
+                      height: 40px; }
+                #nav .w #categorys .dd .dd-inner .item .sub-menu .sub-right .sub-ad {
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 255px;
+                  height: 230px; }
           #nav .w #categorys .dd .dd-inner .item:hover {
             background: #ffffff; }
           #nav .w #categorys .dd .dd-inner .item:hover a {

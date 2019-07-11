@@ -34,6 +34,7 @@ function pic() {
             async: true,
             success: function (str) {
                 //返回验证码
+                console.log(str)
                 telCode(str.phonecode);
 
             }
