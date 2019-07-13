@@ -5,7 +5,7 @@ let hinit = new Promise(function (resolve) {
     $.ajax({
         type: 'post',
 
-        url: '../api/nav.php',
+        url: 'api/nav.php',
         data: '',
         success: function (str) {
             let arr = JSON.parse(str);
@@ -22,7 +22,7 @@ hinit.then(function (data) {
         // console.log(item[0]);
         return `<li class="item" data-id='${item[0].id}'>
                 <h3><i class="i-nav" style="background-position:-28px ${size}px;"></i>
-                <a href="goodslist.html?category=${item[0].Cname}" target="_blank" class="link" >${item[0].Cname}</a><div class="arrow-right">
+                <a href="html/goodslist.html?category=${item[0].Cname}" target="_blank" class="link" >${item[0].Cname}</a><div class="arrow-right">
                 </div></h3>
                 <h4><a href="###">${item[1].Cname}</a></h4>
                 <h4><a href="###">${item[2].Cname}</a></h4>
@@ -41,10 +41,9 @@ let simg = null;
 $('.dd-inner').on('mouseover', '.item', function () {
     let pid = this.dataset.id;
     let ddthis = this;
-    
     $.ajax({
         type: 'post',
-        url: '../api/nav3.php',
+        url: 'api/nav3.php',
         data: 'pid=' + pid,
         asyn: false,
         success: function (str) {
@@ -76,24 +75,19 @@ $('.dd-inner').on('mouseover', '.item', function () {
         //小图
         let arrSimg = img[0].navSimg.split(',');
         let strImg = arrSimg.map(function (item) {
-            item = '..' + item.slice(6);
+            // item = '..' + item.slice(6);
             return "<li><img src='" + item + "' alt=''></li>"
         }).join('');
-        let bimg = '..' + img[0].navBimg.slice(6);
+        let bimg =img[0].navBimg.slice(6);
         $(ddthis).find($('.sub-right')).html("<ul class='sub-brands clearfix'>" + strImg + "</ul>" + "<img class='sub-ad' src='" + bimg + "' alt=''>");
         
     }
+    $(this).find('.sub-menu').show();
 });
-//点击分类展开
-let isok = true;
-$('.dt').click(function(){
-    if(isok){
-        $('.dd').show(); 
-    }else{
-        $('.dd').hide();
-    }
-    isok = !isok;
+$('.dd-inner').on('mouseout', '.item', function (){
+    $(this).find('.sub-menu').hide();
 });
+
 
 //切割数组
 function sliceArr(array, size) {

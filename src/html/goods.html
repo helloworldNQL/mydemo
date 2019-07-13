@@ -11,9 +11,57 @@
     <link rel="stylesheet" href="../css/magnifier.css">
     <link rel="stylesheet" href="../css/cssreset-min.css">
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 
 <body>
+        <div class="header">
+                <div class="w">
+                        <p class="fl"><a href="../inde.html">京东首页</a></p>
+                        <ul class="fr">
+                            <li><a href="login.html" class="link-user">你好，请登录</a>
+                                <a href="###" class="link-logout hide">退出</a>
+                            </li>
+                            <li><a href="">我的订单</a></li>
+                            <li><a href="">我的海囤全球</a></li>
+                            <li><a href=""> 关注海囤全球</a></li>
+                            <li><a href="">帮助中心</a></li>
+                        </ul>
+             </div>
+        </div>
+        <!--  Header End -->
+        <!-- search 搜索栏begin -->
+        <div class="w search">
+            <div class="logo-head">
+                <a href="" alt='京东海囤全球' class="logo">京东海囤全球</a>
+            </div>
+            <div class="mod_service">
+    
+            </div>
+            <div id="search">
+                <div class="form">
+                    <input type="text" id="key" class="text" placeholder="sneakerhead海外旗舰店" value="">
+                    <button class="button action-search-worldwide cw-icon">搜索</button>
+                </div>
+                <div class="hotwords">
+                    <a href="">浪琴</a>
+                    <a href="">运动</a>
+                    <a href="">JM面膜</a>
+                    <a href="">施华洛世奇</a>
+                    <a href="">AJOY SAHU</a>
+                    <a href="">施华洛世奇天鹅系列</a>
+                    <a href="">爱车呵护</a>
+                </div>
+            </div>
+            <div id="settleup" class="dorpdown">
+                <a target="_blank" href="goodscar.html" class="cw-icon">
+                    <i class="ci-left"></i>
+                    <span>我的购物车</span>
+                </a>
+            </div>
+            <span class="clr"></span>
+        </div>
+        <!-- search  end -->
     <div id="crumb-wrap" class="crumb-wrap"></div>
 
     <div id="nav-shop">
@@ -1049,6 +1097,8 @@
     <div id="J-global-toolbar hide"></div>
 </body>
 <script src="../lib/jquery-1.10.1.min.js"></script>
+<script src="../lib/jquery.cookie.js"></script>
+<script src="../js/cookieurl.js"></script>
 <script src="../lib/magnifier.js"></script>
 <script src="../lib/jquery.citys.js"></script>
 <script src="http://pv.sohu.com/cityjson"></script>
@@ -1061,6 +1111,7 @@
         if (returnCitySN) {
             $('#location').citys({ code: returnCitySN['cid'] });
         }
+        setcookie();
     })();
 </script>
 

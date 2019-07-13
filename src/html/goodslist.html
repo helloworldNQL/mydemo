@@ -5,12 +5,100 @@
         <meta charset="utf-8" />
         <title>海囤全球_海外购_海外购物网_100%正品保证-京东</title>
         <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/zxf_page.css">
         <link rel="stylesheet" href="../css/goodslist.css">
+
 </head>
+<style>
+
+</style>
 
 <body>
-        <div class="header"></div>
+        <!-- Header 头部 -->
+        <div class="header">
+                <div class="w">
+                        <p class="fl"><a href="../inde.html">京东首页</a></p>
+                        <ul class="fr">
+                                <li><a href="login.html" class="link-user">你好，请登录</a>
+                                        <a href="###" class="link-logout hide">退出</a>
+                                </li>
+                                <li><a href="">我的订单</a></li>
+                                <li><a href="">我的海囤全球</a></li>
+                                <li><a href=""> 关注海囤全球</a></li>
+                                <li><a href="">帮助中心</a></li>
+                        </ul>
+                </div>
+        </div>
+        <!--  Header End -->
+        <!-- search 搜索栏begin -->
+        <div class="w search">
+                <div class="logo-head">
+                        <a href="" alt='京东海囤全球' class="logo">京东海囤全球</a>
+                </div>
+                <div class="mod_service">
+
+                </div>
+                <div id="search">
+                        <div class="form">
+                                <input type="text" id="key" class="text" placeholder="sneakerhead海外旗舰店" value="">
+                                <button class="button action-search-worldwide cw-icon">搜索</button>
+                        </div>
+                        <div class="hotwords">
+                                <a href="">浪琴</a>
+                                <a href="">运动</a>
+                                <a href="">JM面膜</a>
+                                <a href="">施华洛世奇</a>
+                                <a href="">AJOY SAHU</a>
+                                <a href="">施华洛世奇天鹅系列</a>
+                                <a href="">爱车呵护</a>
+                        </div>
+                </div>
+                <div id="settleup" class="dorpdown">
+                        <a target="_blank" href="goodscar.html" class="cw-icon">
+                                <i class="ci-left"></i>
+                                <span>我的购物车</span>
+                        </a>
+                </div>
+                <span class="clr"></span>
+        </div>
+        <!-- search  end -->
+        <!-- nav 导航栏 begin -->
+        <div id="nav">
+                <div class="w">
+                        <div id="categorys" class="dorpdown">
+                                <div class="dt">
+                                        <a><i class="i1 nav2016"></i>全部商品分类</a>
+                                </div>
+                                <div class="dd hide">
+                                        <ul class="dd-inner">
+                                                <!-- <li class="item">
+                                <h3><i class="i-nav"></i>
+                                    <a href="" class="link">奶粉辅食</a>
+                                    <div class="arrow-right"></div>
+                                </h3>
+                                <h4><a href="">奶粉</a></h4>
+                                <h4><a href="">辅食</a></h4>
+                                <div class="sub-menu"></div>
+                            </li>
+                             -->
+                                        </ul>
+                                </div>
+                        </div>
+                        <div id="navitems">
+                                <ul>
+                                        <li><a href="">首页</a></li>
+                                        <li><a href=""><img src="../img/nav01.png" alt=""></a></li>
+                                        <li><a href=""><img src="../img/nav02.png" alt=""></a></li>
+                                        <li><a href=""><img src="../img/nav03.png" alt=""></a></li>
+                                        <li><a href=""><img src="../img/nav04.png" alt=""></a></li>
+                                </ul>
+                        </div>
+                        <span class="clr"></span>
+                        <div id="nav-ad" class="nav-ad"></div>
+                </div>
+        </div>
+        <!-- banner 焦点图 -->
         <!-- 面包屑 begin -->
         <div class="w">
                 <div class="crumbs-bar clearfix">
@@ -1819,13 +1907,16 @@
         <input type="hidden" id="shopFollowPCSwitch" value="ON">
 </body>
 <script src="../lib/jquery-1.10.1.min.js"></script>
+<script src="../lib/jquery.cookie.js"></script>
+<script src="../js/cookieurl.js"></script>
 <script src="../lib/common.js"></script>
 <script src="../lib/zxf_page.js"></script>
 <script src="../js/goodslist.js"></script>
 <script src="../js/addcar.js"></script>
+<script src="../js/header.js"></script>
 <script>
         (function () {
-               
+                setcookie();      
         })();
 </script>
 
