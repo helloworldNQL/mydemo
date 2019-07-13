@@ -13,7 +13,7 @@ function login() {
     //账号登录
     $('.login-tab-r').on('click', function () {
         $('.login-tab-r a').css({ 'color': '#e4393c', 'font-weight': 700 });
-        $('.login-tab-l a').css( {'color': '#666', 'font-weight': 'normal' });
+        $('.login-tab-l a').css({ 'color': '#666', 'font-weight': 'normal' });
         $('.login-box').show();
         $('.qrcode-login').hide();
 
@@ -27,11 +27,17 @@ function login() {
                 //async: false,
                 success: function (str) {
                     if (str == 'yes') {
-                        location.href = '../inde.html?name=' + name;
+                        let url = $.cookie('url');
+                        if (url) {
+                            //拿到就跳转到上一页
+                            location.href = url;
+                        } else {
+                            location.href = '../inde.html';
+                        }
+                        setcookie(name);
                     } else {
                         $('.msg-error').css('display', 'block').html('<b></b>账户名与密码不匹配，请重新输入');
                     }
-                    setcookie(name);
                 }
             });
         });
@@ -39,7 +45,7 @@ function login() {
     //扫描登录
     $('.login-tab-l').on('click', function () {
         $('.login-tab-l a').css({ 'color': '#e4393c', 'font-weight': 700 });
-        $('.login-tab-r a').css( {'color': '#666', 'font-weight': 'normal' });
+        $('.login-tab-r a').css({ 'color': '#666', 'font-weight': 'normal' });
         $('.qrcode-login').show();
         $('.login-box').hide();
     })
@@ -50,8 +56,5 @@ function login() {
 function setcookie(name) {
     $.cookie('uid', name, { expires: 10 });
 }
-//删除cookie
-function del(name) {
-    $.cookie(name, null);
-}
+
 

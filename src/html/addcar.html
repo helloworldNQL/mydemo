@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/addcar.css">
+</head>
+
+<body>
+    <div class="m hide" id="succeed">
+        <div class="success-top"><b class="succ-icon"></b>
+            <h3>商品已成功加入购物车！</h3><span id="flashBuy" style="display:none">商品数量有限，请您尽快下单并付款！</span>
+        </div>
+        <div class="success-cont">
+            <div class="p-item">
+                <div class="p-img"><a href="//item.jd.com/26189402574.html" target="_blank"><img
+                            src="//img10.360buyimg.com/cms/s60x60_jfs/t15676/281/2394059885/266761/462074f5/5aa8c730N382e3326.jpg"
+                            clstag="clickcart|keycount|xincart|1"></a></div>
+                <div class="p-info">
+                    <div class="p-name"><a href="//item.jd.com/26189402574.html" target="_blank"
+                            clstag="clickcart|keycount|xincart|2"
+                            title="全球购 迪赛/ DIESEL男士手表男大表盘石英男表时尚潮流腕表DZ7395 DZ7395偏光">全球购 迪赛/
+                            DIESEL男士手表男大表盘石英男表时尚潮流腕表DZ7395 DZ7395偏光</a></div>
+                    <div class="p-extra"><span
+                            style="float: left; margin-right: 5px; max-width: 135px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">颜色：DZ7395偏光</span><span
+                            style="float: left; margin-right: 5px; max-width: 135px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                            / 数量：1</span></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!-- window.history.back();return false;login=>window.history.go(-4) -->
+            <div class="success-btns" id="initCart_next_go"><a href="#none" class="btn-tobback"
+                    onclick="window.history.go(-1);" clstag="clickcart|keycount|xincart|3">返回</a><a
+                    href="goodscar.html" class="btn-addtocart" id="GotoShoppingCart"
+                    clstag="clickcart|keycount|xincart|4"><b></b>去购物车结算</a></div>
+        </div>
+    </div>
+    <div class="w nologin hide">
+        <div class="cart-empty">
+            <div class="message">
+                <ul>
+                    <li class="txt">
+                        购物车内暂时没有商品，登录后将显示您之前加入的商品
+                    </li>
+                    <li>
+                        <a href="login.html" class="btn-1 login-btn mr10">登录</a>
+                        <a href="../inde.html" class="ftx-05">
+                            去购物&gt;
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../lib/jquery-1.10.1.min.js"></script>
+<script src="../lib/jquery.cookie.js"></script>
+<script src="../lib/common.js"></script>
+<script src="../js/addcar.js"></script>
+<script>
+
+    (function () {
+        addcar();
+    })();
+</script>
+
+</html>

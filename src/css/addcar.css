@@ -1,0 +1,166 @@
+.clear, .clr {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}
+
+#succeed {
+  width: 830px;
+  margin: 70px auto 85px;
+  font-family: 'Microsoft YaHei';
+}
+#succeed .success-top {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 24px;
+}
+#succeed .success-top .succ-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  background: url(../../skin/i/cart-go.png) 0 -60px no-repeat;
+}
+#succeed .success-top h3 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #ff3e68;
+}
+#succeed .success-cont {
+  display: inline-block;
+  display: block;
+}
+#succeed .success-cont .btn-addtocart, #succeed .success-cont .btn-tobback {
+  display: inline-block;
+  font-size: 18px;
+  vertical-align: middle;
+}
+#succeed .success-cont .p-item {
+  float: left;
+  margin-right: 60px;
+}
+#succeed .success-cont .p-item .p-img {
+  float: left;
+  width: 80px;
+  margin-right: 10px;
+  border: 1px solid #e8e8e8;
+}
+#succeed .success-cont .p-item .p-img a {
+  color: #666;
+  text-decoration: none;
+}
+#succeed .success-cont .p-item .p-img a img {
+  width: 60px;
+  height: 60px;
+  border: 0;
+  vertical-align: middle;
+}
+#succeed .success-cont .p-item .p-info {
+  float: left;
+  width: 350px;
+  margin: 15px 0 0;
+}
+#succeed .success-cont .p-item .p-info .p-name {
+  width: 100%;
+  line-height: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+#succeed .success-cont .p-item .p-info .p-name a {
+  color: #747474;
+}
+#succeed .success-cont .p-item .p-info .p-extra {
+  color: #9e9e9e;
+}
+#succeed .success-cont .success-btns {
+  float: right;
+  font-size: 0;
+}
+#succeed .success-cont .success-btns .btn-tobback {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 40px;
+  border: 1px solid #000;
+  color: #000;
+}
+#succeed .success-cont .success-btns .btn-addtocart {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin-left: 10px;
+  line-height: 50px;
+  background: #ff3e68;
+  color: #fff;
+  text-align: center;
+}
+#succeed .success-cont .success-btns .btn-addtocart b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 50px;
+  overflow: hidden;
+  background: url(../../skin/i/cart-go.png) 0 0 no-repeat;
+}
+#succeed .success-cont:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.w {
+  width: 990px;
+  margin: 0 auto;
+}
+.w .cart-empty {
+  height: 98px;
+  padding: 80px 0 120px;
+  color: #333;
+}
+.w .cart-empty .message {
+  height: 98px;
+  padding-left: 341px;
+  background: url(../img/no-login-icon.png) 250px 22px no-repeat;
+}
+.w .cart-empty .message .cart-empty .message ul {
+  padding-top: 23px;
+}
+.w .cart-empty .message .cart-empty .message ul .txt {
+  font-size: 14px;
+}
+.w .cart-empty .message .cart-empty .message ul li {
+  line-height: 26px;
+}
+.w .cart-empty .message .cart-empty .message ul li .btn-1 {
+  font-family: arial,"microsoft yahei";
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  background-color: #e74649;
+  background-image: linear-gradient(to top, #e74649 0, #df3134 100%);
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0 10px;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 0;
+  float: none;
+  transition: all .2s ease-out;
+}
+.w .cart-empty .message .cart-empty .message ul li .mr10 {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=addcar.css.map */

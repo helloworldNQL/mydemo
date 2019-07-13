@@ -18,7 +18,18 @@
 <body>
     <!-- header -->
     <div class="header" style="width: 100%">
-
+        <div class="w">
+            <p class="fl"><a href="">京东首页</a></p>
+            <ul class="fr">
+                <li><a href="login.html" class="link-user">你好，请登录</a>
+                    <a href="###" class="link-logout hide">退出</a>
+                </li>
+                <li><a href="">我的订单</a></li>
+                <li><a href="">我的海囤全球</a></li>
+                <li><a href=""> 关注海囤全球</a></li>
+                <li><a href="">帮助中心</a></li>
+            </ul>
+        </div>
     </div>
     <!-- login -->
     <div class="w rlt">
@@ -45,7 +56,7 @@
         <div class="nologin-tip">
             <span class="wicon"></span>
             您还没有登录！登录后购物车的商品将保存到您账号中
-            <a class="btn-1 ml10" href="#none" clstag="clickcart|keycount|xincart|cart_pageTopLogin">立即登录</a>
+            <a class="btn-1 ml10" href="login.html">立即登录</a>
         </div>
         <div class="cart-filter-bar">
             <ul class="switch-cart">
@@ -83,7 +94,6 @@
                 <li class="list_chk">
                     <!--所有商品全选-->
                     <input type="checkbox" id="all" class="whole_check">
-                    <label for="all"></label>
                     全选
                 </li>
                 <li class="list_con">商品</li>
@@ -94,11 +104,11 @@
                 <li class="list_op">操作</li>
             </ul>
         </div>
-
-        <div class="cartBox">
+        <!-- 数据渲染 -->
+        <!-- <div class="cartBox">
             <div class="shop_info">
                 <div class="all_check">
-                    <!--店铺全选-->
+                    <! --店铺全选- ->
                     <input type="checkbox" id="shop_a" class="shopChoice">
                     <label for="shop_a" class="shop"></label>
                 </div>
@@ -206,7 +216,7 @@
         <div class="cartBox">
             <div class="shop_info">
                 <div class="all_check">
-                    <!--店铺全选-->
+                    <!- -店铺全选- ->
                     <input type="checkbox" id="shop_b" class="shopChoice">
                     <label for="shop_b" class="shop"></label>
                 </div>
@@ -283,7 +293,7 @@
         <div class="cartBox">
             <div class="shop_info">
                 <div class="all_check">
-                    <!--店铺全选-->
+                    <!- -店铺全选- ->
                     <input type="checkbox" id="shop_c" class="shopChoice">
                     <label for="shop_c" class="shop"></label>
                 </div>
@@ -355,17 +365,19 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
+        <!-- 数据渲染end -->
         <!--底部-->
         <div class="bar-wrapper">
             <div class="bar-left fl">
-                <li class="list_chk fl">
-                    <!--所有商品全选-->
+                <!--所有商品全选-->
+                <!-- <li class="list_chk fl">
+                    
                     <input type="checkbox" class="whole_check">
                     <label for="all"></label>
                     全选
-                </li>
-                <div class="delBtn fl">删除选中的商品</div>
+                </li> -->
+                <div class="delAll fl" style="cursor: pointer;">删除选中的商品</div>
             </div>
             <div class="bar-right">
                 <div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
@@ -384,15 +396,21 @@
 
 </body>
 <script src="../lib/jquery-1.10.1.min.js"></script>
-<script src="../lib/carts.js"></script>
+<script src="../lib/jquery.cookie.js"></script>
+<script src="../js/showcar.js"></script>
+<script src="../js/car.js"></script>
 <script src="../lib/jquery.citys.js"></script>
 <script src="http://pv.sohu.com/cityjson"></script>
+
+<!-- <script src="../lib/require.js" data-main="../js/main"></script>
+ <script src="http://pv.sohu.com/cityjson"></script> -->
 <script>
     (function () {
-        $('.header').load('top.html');
         if (returnCitySN) {
             $('#location').citys({ code: returnCitySN['cid'] });
         }
+        setcookie();
+        
     })();
 </script>
 

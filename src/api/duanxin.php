@@ -6,12 +6,11 @@
 
 	$num = rand(100000,999999); //生成4位数的随机验证码
 
-
     $url = "http://v.juhe.cn/sms/send";//接口
-	$params = array(
-	    'key'   => 'dcc37e77eabd1edfea27e84725658cc3', //您申请的APPKEY
+	$params = array(//3f41131f1e46a8ea793f26b5f147ebf5 172114
+	    'key'   => '', //您申请的APPKEY
 	    'mobile'    => $userphone, //接受短信的用户手机号码
-	    'tpl_id'    => '170968', //您申请的短信模板ID，根据实际情况修改
+	    'tpl_id'    => '', //您申请的短信模板ID，根据实际情况修改
 	    'tpl_value' =>'#code#='.$num.'&#company#=聚合数据' //您设置的模板变量，根据实际情况修改
 	);
 

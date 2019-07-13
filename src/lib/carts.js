@@ -2,11 +2,11 @@
  * Created by Administrator on 2017/5/24.
  */
 
-$(function () {
-
+function carts() {
+    // alert('啊啊啊啊啊');
     //全局的checkbox选中和未选中的样式
     var $allCheckbox = $('input[type="checkbox"]'),     //全局的全部checkbox
-        $wholeChexbox = $('.whole_check'),
+        $wholeChexbox = $('.whole_check'),  //商店选择按钮
         $cartBox = $('.cartBox'),                       //每个商铺盒子
         $shopCheckbox = $('.shopChoice'),               //每个商铺的checkbox
         $sonCheckBox = $('.son_check');                 //每个商铺下的商品的checkbox
@@ -17,9 +17,10 @@ $(function () {
             $(this).next('label').removeClass('mark')
         }
     });
-
+    //商店选择按钮shopChoice //全选按钮 wholeChexbox
     //===============================================全局全选与单个商品的关系================================
     $wholeChexbox.click(function () {
+        console.log($wholeChexbox);
         var $checkboxs = $cartBox.find('input[type="checkbox"]');
         if ($(this).is(':checked')) {
             $checkboxs.prop("checked", true);
@@ -30,8 +31,6 @@ $(function () {
         }
         totalMoney();
     });
-
-
     $sonCheckBox.each(function () {
         $(this).click(function () {
             if ($(this).is(':checked')) {
@@ -59,7 +58,9 @@ $(function () {
 
     //店铺有一个未选中，全局全选按钮取消对勾，若店铺全选中，则全局全选按钮打对勾。
     $shopCheckbox.each(function () {
+        
         $(this).click(function () {
+           
             if ($(this).is(':checked')) {
                 //判断：店铺全选中，则全局全选按钮打对勾。
                 var len = $shopCheckbox.length;
@@ -73,9 +74,9 @@ $(function () {
                     $wholeChexbox.prop("checked", true);
                     $wholeChexbox.next('label').addClass('mark');
                 }
-
                 //店铺下的checkbox选中状态
-                $(this).parents('.cartBox').find('.son_check').prop("checked", true);
+                 console.log($(this));
+               $(this).parents('.cartBox').find('.son_check').prop("checked", true);
                 $(this).parents('.cartBox').find('.son_check').next('label').addClass('mark');
             } else {
                 //否则，全局全选按钮取消对勾
@@ -99,6 +100,7 @@ $(function () {
         var $sonChecks = $this.find('.son_check');
         $sonChecks.each(function () {
             $(this).click(function () {
+                console.log($(this));
                 if ($(this).is(':checked')) {
                     //判断：如果所有的$sonChecks都选中则店铺全选打对勾！
                     var len = $sonChecks.length;
@@ -199,8 +201,8 @@ $(function () {
     }
     //确定按钮，移除商品
     $('.dialog-sure').click(function () {
-        $order_lists.remove();
-        if($order_content.html().trim() == null || $order_content.html().trim().length == 0){
+        $('.order_lists').remove();
+        if($.trim($order_content.html()) == null || $.trim($order_content.html()).length == 0){
             $order_content.parents('.cartBox').remove();
         }
         closeM();
@@ -237,6 +239,4 @@ $(function () {
             }
         }
     }
-
-
-});
+};

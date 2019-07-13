@@ -4,296 +4,351 @@ html, body {
   font: 12px/150% tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #666;
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 .w {
-  width: 1210px; }
+  width: 1210px;
+}
 
 .clearfix:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 .header {
   height: 110px;
-  background: url(../img/Reg-headbg.jpg) repeat-x left bottom; }
-  .header .logo {
-    width: 160px;
-    height: 50px;
-    float: left;
-    margin-top: 24px;
-    background: url(../img/Reg-icon.png) no-repeat; }
-  .header .logo-title {
-    float: left;
-    height: 34px;
-    line-height: 34px;
-    font-size: 24px;
-    color: #333;
-    margin-top: 34px; }
-  .header .have-account {
-    font-size: 16px;
-    float: right;
-    margin-top: 55px;
-    color: #999; }
-    .header .have-account a {
-      color: #e22; }
+  background: url(../img/Reg-headbg.jpg) repeat-x left bottom;
+}
+.header .logo {
+  width: 160px;
+  height: 50px;
+  float: left;
+  margin-top: 24px;
+  background: url(../img/Reg-icon.png) no-repeat;
+}
+.header .logo-title {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  font-size: 24px;
+  color: #333;
+  margin-top: 34px;
+}
+.header .have-account {
+  font-size: 16px;
+  float: right;
+  margin-top: 55px;
+  color: #999;
+}
+.header .have-account a {
+  color: #e22;
+}
 
 .progress-bar {
   position: relative;
   margin: 80px auto 0;
-  width: 400px; }
-  .progress-bar .pro-line, .progress-bar .pro-step .step-index {
-    background: url(../img/reg-icon2.png) no-repeat; }
-  .progress-bar .pro-step {
-    float: left;
-    text-align: center; }
-    .progress-bar .pro-step .step-index {
-      margin: 0 auto;
-      display: block;
-      width: 24px;
-      height: 24px;
-      line-height: 24px;
-      background-position: -45px -200px;
-      font-size: 12px;
-      font-weight: 700;
-      color: #ccc; }
-    .progress-bar .pro-step .step-desc {
-      color: #3b4;
-      margin-top: 10px;
-      font-size: 12px;
-      color: #999; }
-  .progress-bar .person-pro-line1 {
-    left: 55px; }
-  .progress-bar .pro-line {
-    position: absolute;
-    top: 7px;
-    width: 74px;
-    height: 10px;
-    background-position: 0 -40px; }
-  .progress-bar .person-pro-line1 {
-    left: 55px; }
-  .progress-bar .pro-line1 {
-    left: 50px; }
-  .progress-bar .person-pro-step2 {
-    margin-left: 106px; }
-  .progress-bar .person-pro-line2 {
-    left: 228px; }
-  .progress-bar .person-pro-step3 {
-    margin-left: 112px; }
-  .progress-bar .person-pro-line {
-    width: 124px;
-    background-position: 0 -100px; }
-  .progress-bar .cur-step .step-index {
-    background-position: 0 -200px;
-    color: #fff; }
+  width: 400px;
+}
+.progress-bar .pro-line, .progress-bar .pro-step .step-index {
+  background: url(../img/reg-icon2.png) no-repeat;
+}
+.progress-bar .pro-step {
+  float: left;
+  text-align: center;
+}
+.progress-bar .pro-step .step-index {
+  margin: 0 auto;
+  display: block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  background-position: -45px -200px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ccc;
+}
+.progress-bar .pro-step .step-desc {
+  color: #3b4;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+}
+.progress-bar .person-pro-line1 {
+  left: 55px;
+}
+.progress-bar .pro-line {
+  position: absolute;
+  top: 7px;
+  width: 74px;
+  height: 10px;
+  background-position: 0 -40px;
+}
+.progress-bar .person-pro-line1 {
+  left: 55px;
+}
+.progress-bar .pro-line1 {
+  left: 50px;
+}
+.progress-bar .person-pro-step2 {
+  margin-left: 106px;
+}
+.progress-bar .person-pro-line2 {
+  left: 228px;
+}
+.progress-bar .person-pro-step3 {
+  margin-left: 112px;
+}
+.progress-bar .person-pro-line {
+  width: 124px;
+  background-position: 0 -100px;
+}
+.progress-bar .cur-step .step-index {
+  background-position: 0 -200px;
+  color: #fff;
+}
 
 .main {
   margin: 50px auto 186px;
   width: 400px;
-  /* 下一步 */ }
-  .main .form-item {
-    position: relative;
-    border: solid 1px #ddd;
-    width: 398px;
-    height: 52px;
-    z-index: 0; }
-    .main .form-item label {
-      float: left;
-      width: 87px;
-      height: 50px;
-      line-height: 50px;
-      padding-left: 20px;
-      border-right: 1px solid #cccccc; }
-    .main .form-item .item-input-wrap {
-      float: left;
-      width: 288px;
-      height: 50px;
-      border: solid 1px #ddd; }
-  .main .item-phone-wrap {
-    height: 86px;
-    position: relative;
-    z-index: 2; }
-    .main .item-phone-wrap .form-item-phone {
-      border: none; }
-      .main .item-phone-wrap .form-item-phone .select-country {
-        border: solid 1px #ddd;
-        border-right: none;
-        padding: 0 0 0 20px;
-        cursor: pointer;
-        color: #666; }
-      .main .item-phone-wrap .form-item-phone .arrow {
-        background: url(../img/Reg-icon.png) no-repeat;
-        width: 15px;
-        height: 15px;
-        display: inline-block;
-        margin-top: 15px;
-        margin-left: 5px;
-        background-position: -2px -150px; }
-    .main .item-phone-wrap txt {
-      margin-top: 2px !important; }
-    .main .item-phone-wrap .i-status {
+  /* 下一步 */
+}
+.main .form-item {
+  position: relative;
+  border: solid 1px #ddd;
+  width: 398px;
+  height: 52px;
+  z-index: 0;
+}
+.main .form-item label {
+  float: left;
+  width: 87px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  border-right: 1px solid #cccccc;
+}
+.main .form-item .item-input-wrap {
+  float: left;
+  width: 288px;
+  height: 50px;
+  border: solid 1px #ddd;
+}
+.main .item-phone-wrap {
+  height: 86px;
+  position: relative;
+  z-index: 2;
+}
+.main .item-phone-wrap .form-item-phone {
+  border: none;
+}
+.main .item-phone-wrap .form-item-phone .select-country {
+  border: solid 1px #ddd;
+  border-right: none;
+  padding: 0 0 0 20px;
+  cursor: pointer;
+  color: #666;
+}
+.main .item-phone-wrap .form-item-phone .arrow {
+  background: url(../img/Reg-icon.png) no-repeat;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 5px;
+  background-position: -2px -150px;
+}
+.main .item-phone-wrap txt {
+  margin-top: 2px !important;
+}
+.main .item-phone-wrap .i-status {
+  position: absolute;
+  display: none;
+  width: 16px;
+  height: 16px;
+  top: 20px;
+  right: 20px;
+}
+.main .item-phone-wrap .i-cancel {
+  background-position: -80px -160px;
+  position: absolute;
+  display: none;
+  width: 12px;
+  height: 12px;
+  top: 22px;
+  right: 20px;
+  cursor: pointer;
+}
+.main .item-phone-wrap .input-tip {
+  color: #c5c5c5;
+  height: 27px;
+  font-size: 12px;
+  padding-top: 5px;
+}
+.main .item-phone-wrap .input-tip .error, .main .item-phone-wrap .input-tip .orange, .main .item-phone-wrap .input-tip .phone-bind-tip {
+  color: #f91;
+}
+.main .item-phone-wrap .input-tip .error {
+  display: none;
+}
+.main .item-phone-wrap .input-tip span i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+  margin-right: 8px;
+}
+.main .item-phone-wrap .input-tip .i-error {
+  background-position: -17px -100px;
+}
+.main .mailcode-left, .main .phonecode-left {
+  position: relative;
+  float: left;
+  border: solid 1px #ddd;
+}
+.main .form-item .mailcode, .main .form-item .phonecode {
+  width: 152px;
+}
+.main .btn-mailcode, .main .btn-phonecode {
+  float: left;
+  width: 118px;
+  height: 52px;
+  border: 1px solid #ddd;
+  border-left: none;
+  background: #fff;
+  color: #333;
+  padding: 0;
+}
+.main .field {
+  border: 0 none;
+  font-size: 14px;
+  width: 220px;
+  height: 23px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+  padding-top: 16px;
+}
+.main .checkRegDialog .ico, .main .form-item-valid .i-status, .main .i-company, .main .i-def, .main .i-error, .main .i-error1, .main .i-global, .main .i-info, .main .i-pwd-medium, .main .i-pwd-strong, .main .i-pwd-weak, .main .i-suc {
+  background: url(../img/Reg-icon.png) no-repeat;
+}
+.main .form-agreen .agree-tip i, .main .form-agreen .sim-checkbox, .main .form-item .i-cancel, .main .reg-other .reg-ohter-icon {
+  background: url(../img/reg-icon2.png) no-repeat;
+}
+.main .form-item-getcode {
+  line-height: 52px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  z-index: 2;
+}
+.main .form-item-getcode .slide-authCode-wraper {
+  display: none;
+  line-height: 1.5;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  bottom: 65px;
+  font-family: "Microsoft YaHei";
+  background-color: #fff;
+  cursor: default;
+  z-index: 110;
+  box-shadow: 0 0 2px 2px #eee;
+  border: 1px solid #eee;
+  width: 364px;
+  height: 216.5px;
+  padding: 12px 12px 12px 20px;
+  /* .arrow {
+      display: block;
       position: absolute;
-      display: none;
+      background-image: url(../img/reg-tips.gif);
+      background-repeat: no-repeat;
       width: 16px;
-      height: 16px;
-      top: 20px;
-      right: 20px; }
-    .main .item-phone-wrap .i-cancel {
-      background-position: -80px -160px;
+      height: 8px;
+      background-position: 0 -8px;
+      overflow: hidden;
+      bottom: -8px;
+      left: 190px;
+  }
+  .close {
+      cursor: pointer;
+      z-index: 100;
       position: absolute;
-      display: none;
+      right: 10px;
+      top: 10px;
+      display: block;
       width: 12px;
       height: 12px;
-      top: 22px;
-      right: 20px;
-      cursor: pointer; }
-    .main .item-phone-wrap .input-tip {
-      color: #c5c5c5;
-      height: 27px;
-      font-size: 12px;
-      padding-top: 5px; }
-      .main .item-phone-wrap .input-tip .error, .main .item-phone-wrap .input-tip .orange, .main .item-phone-wrap .input-tip .phone-bind-tip {
-        color: #f91; }
-      .main .item-phone-wrap .input-tip .error {
-        display: none; }
-      .main .item-phone-wrap .input-tip span i {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: text-top;
-        margin-right: 8px; }
-      .main .item-phone-wrap .input-tip .i-error {
-        background-position: -17px -100px; }
-  .main .mailcode-left, .main .phonecode-left {
-    position: relative;
-    float: left;
-    border: solid 1px #ddd; }
-  .main .form-item .mailcode, .main .form-item .phonecode {
-    width: 152px; }
-  .main .btn-mailcode, .main .btn-phonecode {
-    float: left;
-    width: 118px;
-    height: 52px;
-    border: 1px solid #ddd;
-    border-left: none;
-    background: #fff;
-    color: #333;
-    padding: 0; }
-  .main .field {
-    border: 0 none;
-    font-size: 14px;
-    width: 220px;
-    height: 23px;
-    padding-bottom: 11px;
-    padding-left: 20px;
-    padding-top: 16px; }
-  .main .checkRegDialog .ico, .main .form-item-valid .i-status, .main .i-company, .main .i-def, .main .i-error, .main .i-error1, .main .i-global, .main .i-info, .main .i-pwd-medium, .main .i-pwd-strong, .main .i-pwd-weak, .main .i-suc {
-    background: url(../img/Reg-icon.png) no-repeat; }
-  .main .form-agreen .agree-tip i, .main .form-agreen .sim-checkbox, .main .form-item .i-cancel, .main .reg-other .reg-ohter-icon {
-    background: url(../img/reg-icon2.png) no-repeat; }
-  .main .form-item-getcode {
-    line-height: 52px;
-    text-align: center;
-    font-size: 14px;
-    color: #333;
-    cursor: pointer;
-    z-index: 2; }
-    .main .form-item-getcode .slide-authCode-wraper {
-      display: none;
-      line-height: 1.5;
-      text-align: left;
-      position: absolute;
-      left: 0;
-      bottom: 65px;
-      font-family: "Microsoft YaHei";
-      background-color: #fff;
-      cursor: default;
-      z-index: 110;
-      box-shadow: 0 0 2px 2px #eee;
-      border: 1px solid #eee;
-      width: 364px;
-      height: 216.5px;
-      padding: 12px 12px 12px 20px;
-      /* .arrow {
-          display: block;
-          position: absolute;
-          background-image: url(../img/reg-tips.gif);
-          background-repeat: no-repeat;
-          width: 16px;
-          height: 8px;
-          background-position: 0 -8px;
-          overflow: hidden;
-          bottom: -8px;
-          left: 190px;
-      }
-      .close {
-          cursor: pointer;
-          z-index: 100;
-          position: absolute;
-          right: 10px;
-          top: 10px;
-          display: block;
-          width: 12px;
-          height: 12px;
-          background-image: url(../img/reg-x.png);
-      } */ }
-  .main .input-tip {
-    color: #c5c5c5;
-    height: 27px;
-    font-size: 12px;
-    padding-top: 5px; }
-  .main .item-mailcode-wrap, .main .item-phonecode-wrap {
-    display: none;
-    height: 86px; }
-  .main .form-item-mailcode, .main .form-item-phonecode {
-    border: none;
-    z-index: 110;
-    width: 400px; }
-  .main .mailcode-left, .main .phonecode-left {
-    position: relative;
-    float: left;
-    border: solid 1px #ddd; }
-  .main .btn-register {
-    width: 100%;
-    height: 54px;
-    line-height: 54px;
-    text-align: center;
-    color: #fff;
-    background: #e2231a;
-    border: 0;
-    font-size: 16px;
-    font-family: "Microsoft YaHei","Hiragino Sans GB";
-    cursor: pointer; }
-  .main #step3-wrap {
-    position: relative; }
-    .main #step3-wrap h2 {
-      font-size: 28px;
-      font-weight: bold;
-      text-align: center;
-      color: #58bc58; }
-    .main #step3-wrap span {
-      position: absolute;
-      top: 35px;
-      left: 160px;
-      display: block;
-      width: 80px;
-      height: 77px;
-      background: url(../img/Reg-icon.png) no-repeat -95px -45px; }
-    .main #step3-wrap a {
-      margin-top: 120px;
-      display: block;
-      width: 100%;
-      height: 54px;
-      margin-right: 10px;
-      line-height: 54px;
-      text-align: center;
-      color: #fff;
-      background: #58bc58;
-      border: 0;
-      font-size: 16px;
-      font-family: "Microsoft YaHei","Hiragino Sans GB";
-      cursor: pointer; }
+      background-image: url(../img/reg-x.png);
+  } */
+}
+.main .input-tip {
+  color: #c5c5c5;
+  height: 27px;
+  font-size: 12px;
+  padding-top: 5px;
+}
+.main .item-mailcode-wrap, .main .item-phonecode-wrap {
+  display: none;
+  height: 86px;
+}
+.main .form-item-mailcode, .main .form-item-phonecode {
+  border: none;
+  z-index: 110;
+  width: 400px;
+}
+.main .mailcode-left, .main .phonecode-left {
+  position: relative;
+  float: left;
+  border: solid 1px #ddd;
+}
+.main .btn-register {
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
+  text-align: center;
+  color: #fff;
+  background: #e2231a;
+  border: 0;
+  font-size: 16px;
+  font-family: "Microsoft YaHei","Hiragino Sans GB";
+  cursor: pointer;
+}
+.main #step3-wrap {
+  position: relative;
+}
+.main #step3-wrap h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #58bc58;
+}
+.main #step3-wrap span {
+  position: absolute;
+  top: 35px;
+  left: 160px;
+  display: block;
+  width: 80px;
+  height: 77px;
+  background: url(../img/Reg-icon.png) no-repeat -95px -45px;
+}
+.main #step3-wrap a {
+  margin-top: 120px;
+  display: block;
+  width: 100%;
+  height: 54px;
+  margin-right: 10px;
+  line-height: 54px;
+  text-align: center;
+  color: #fff;
+  background: #58bc58;
+  border: 0;
+  font-size: 16px;
+  font-family: "Microsoft YaHei","Hiragino Sans GB";
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=regsiter.css.map */

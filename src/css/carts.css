@@ -5,9 +5,9 @@ html,body{
     font: 12px/150% Arial,Verdana,"\5b8b\4f53";
     color: #666;
 }
-input[type="checkbox"]{
+/* input[type="checkbox"]{
     display: none;
-}
+} */
 label{
     position: relative;
     display: inline-block;
@@ -133,10 +133,10 @@ a:hover{
     width: 50px;
 }
 .order_lists .list_chk input[type="checkbox"]{
-    position: absolute;
+    /* position: absolute; */
     z-index: 0;
-    left: -20px;
-    top: -20px;
+    left: 0px;
+    top: 0px;
 }
 .order_lists .list_chk label{
     margin: 20px 0 0 24px;

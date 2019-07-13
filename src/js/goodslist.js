@@ -1,4 +1,5 @@
-let iPage = 1;//获取第一页内容
+let iPage = '';
+iPage = iPage || 1;//获取第一页内容
 let num = 8;//每页10条内容
 let url = location.search;
 //字符串转对象
@@ -55,9 +56,9 @@ function show(data, pages) {
         }
     });
     let html = data.map(function (item) {
-        // console.log(item.img);
+        //console.log(item);
         let img = item.img.split(',');
-        // console.log(img[0]);
+        console.log(item.gshop);
         return ` <li class="gl-item">
                     <div class="p-tab">
                             <ul>
@@ -88,7 +89,7 @@ function show(data, pages) {
                         </div>
                         <div class="p-buy">
                             <div class="assess">
-                                <a href="###" target="_blank" class="comment"><i>${item.sales}</i><em> 条评价</em></a>
+                                <a href="###" target="_blank" class="comment"><span class="cNum"><b class="comment_num">${item.sales}+</b> 件销售量</span></a>
                             </div>
                         </div>
                         <div class='p-shop-name' isSelfDD="true">
@@ -113,7 +114,7 @@ function show(data, pages) {
                             <a href="javascript:;"class="p-o-btn contrast J_contrast"><i></i>对比</a>
                         </div>
                         <div class="addCart">
-                            <a href="goodscar.html"><i></i><em>加入购物车</em></a>
+                            <a href="addcar.html?id=${item.gId}&img=${img[0]}&name=${item.gName}&sname=${item.gshop}"><i></i><em>加入购物车</em></a>
                         </div>
                     </div>
                 </div>

@@ -682,7 +682,8 @@ ins {
         color: #666;
         position: absolute;
         right: -1px;
-        border: 1px solid #ccc; }
+        border: 1px solid #ccc;
+        cursor: pointer; }
     .product-intro .itemInfo-wrap .choose-btns .btn-lg {
       height: 50px;
       line-height: 50px;

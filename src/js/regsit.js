@@ -34,9 +34,10 @@ function pic() {
             async: true,
             success: function (str) {
                 //返回验证码
-                console.log(str)
-                telCode(str.phonecode);
-
+                console.log(str);
+                let arr =JSON.parse(str);
+                telCode(arr.phonecode);
+                console.log(arr.phonecode);
             }
         });
 
@@ -49,6 +50,7 @@ function pic() {
 function telCode(code) {
     //验证码正确才可以点击下一步
     $('#step1-next').click(function () {
+        console.log(code);
         if ($('#phoneCode').val() == code) {
             $('#step1-wrap').hide();
             $('#step2-wrap').show();

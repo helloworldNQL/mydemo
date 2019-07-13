@@ -13,7 +13,7 @@
     // var_dump($row);
     if($row){
         //购物车已经存在，则改变原有数量
-        $sql2 = "UPDATE cars SET dnum=dnum+$num*1 WHERE goodsid = '$gid' AND dUname='$uname';";
+        $sql2 = "UPDATE cars SET dnum=$num WHERE goodsid = '$gid' AND dUname='$uname';";
         $res2 = $conn->query($sql2);
     }else{
         //不存在，插入一条新的商品信息 //dUname用户名 goodsid商品id shopname 店名 dnum 数量

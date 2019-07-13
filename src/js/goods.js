@@ -14,7 +14,7 @@ function gShow() {
             }
         });
     });
-    init.then(function (data) {     
+    init.then(function (data) {
         console.log(data[0]);
         $('.sku-name').html(data[0].gName);
         $('.J-p-41495598491').html(data[0].gNowPrice);
@@ -32,7 +32,7 @@ function gShow() {
         goods();
         //颜色
         let col = data[0].color.split(',');
-        let color = col.map(function(item){
+        let color = col.map(function (item) {
             return `<div class="item  " data-sku="41495598488" data-value="AR1908">
                     <b></b>
                     <a href="#none" clstag="shangpin|keycount|product|yanse-AR1908_oversea">
@@ -43,10 +43,38 @@ function gShow() {
                     </div>`
         }).join('');
         $('#choose-attr-1 .dd').html(color);
-        
+        console.log(data[0].gId);//addcar.html?id=${item.gId}&img=${img[0]}&name=${item.gName}
+        $('#InitCartUrl').attr( 'href' ,'addcar.html?id='+ data[0].gId + '&img=' + img[0] + '&name=' + data[0].gName + '&sname=' + data[0].gshop);
     });
-
 }
+//加入购物车
+$('#InitCartUrl').click(function () {
+    //商品id 用户名uname 数量 num
+    // console.log($('#buy-num').val());
+    addcar($('#buy-num').val());
+});
+let num = $('#buy-num').val();
+$('#buy-num').blur(function(){
+    if ($('#buy-num').val() >= 20) {
+        $('#buy-num').val(20);
+    }else if ($('#buy-num').val() <= 0) {
+        $('#buy-num').val(1);
+    }
+})
+$('.btn-add').click(function () {
+    num++;
+    if (num >= 20) {
+        num = 20
+    }
+    $('#buy-num').val(num);
+});
+$('.btn-reduce').click(function () {
+    num--;
+    if (num <= 0) {
+        num = 1;
+    }
+    $('#buy-num').val(num);
+});
 //放大镜
 function goods() {
     var magnifierConfig = {
