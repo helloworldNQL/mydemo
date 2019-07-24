@@ -866,6 +866,13 @@ img {
                                 position: absolute;
                             }
                         }
+                        .addCart i {
+                            background: url(../img/goodslist-cart-new.png) no-repeat center;
+                            width: 14px;
+                            height: 14px;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
                         .addCart,.presale_cyqg {
                             width: 92px;
                             height: 26px;
@@ -879,7 +886,14 @@ img {
                         }
                     }
                 }
-
+                .gl-item:hover{
+                    border: 1px solid #863177;
+                    z-index: 2;
+                }
+                .gl-item .other .addCart:hover,.gl-item .other .presale_cyqg:hover {
+                    border: 1px solid #863177;
+                    z-index: 1;
+                }
             }
 
         }

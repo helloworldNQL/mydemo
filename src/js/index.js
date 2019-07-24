@@ -75,7 +75,8 @@ $('.dd-inner').on('mouseover', '.item', function () {
         //小图
         let arrSimg = img[0].navSimg.split(',');
         let strImg = arrSimg.map(function (item) {
-            // item = '..' + item.slice(6);
+            item = item.slice(7);
+            console.log(item);
             return "<li><img src='" + item + "' alt=''></li>"
         }).join('');
         let bimg =img[0].navBimg.slice(6);

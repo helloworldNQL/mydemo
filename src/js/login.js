@@ -34,7 +34,7 @@ function login() {
                         } else {
                             location.href = '../inde.html';
                         }
-                        setcookie(name);
+                        setcook(name);
                     } else {
                         $('.msg-error').css('display', 'block').html('<b></b>账户名与密码不匹配，请重新输入');
                     }
@@ -53,7 +53,7 @@ function login() {
     //
 }
 //保存cookie 10天bi
-function setcookie(name) {
+function setcook(name) {
     $.cookie('uid', name, { expires: 10 });
 }
 

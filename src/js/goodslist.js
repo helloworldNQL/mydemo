@@ -1,5 +1,4 @@
-let iPage = '';
-iPage = iPage || 1;//获取第一页内容
+let iPage = 1;//获取第一页内容
 let num = 8;//每页10条内容
 let url = location.search;
 //字符串转对象

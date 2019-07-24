@@ -1,6 +1,7 @@
 setcookie();
 //退出登录
 if($.cookie('uid') == 'null'){
+    console.log('no');
 }else{
     usergoods($.cookie('uid'));
 }
@@ -37,7 +38,7 @@ function usergoods(uname) {
             });
             goods.then(function (data) {
                 let goodscar = data.map(function (shop) {
-                    //console.log(shop);
+                    console.log(shop);
                     let img = shop.img.split(',');
                     //  console.log(img);
                     return `<ul class="order_lists">
@@ -46,9 +47,9 @@ function usergoods(uname) {
 
                     </li>
                     <li class="list_con">
-                        <div class="list_img"><a href="javascript:;"><img src="${img[0]}" alt=""></a>
+                        <div class="list_img"><a href="goods.html?id=${shop.gId}"><img src="${img[0]}" alt=""></a>
                         </div>
-                        <div class="list_text"><a href="javascript:;">${shop.gName}</a></div>
+                        <div class="list_text"><a href="goods.html?id=${shop.gId}">${shop.gName}</a></div>
                     </li>
                     <li class="list_info">
                         <p>规格：默认</p>

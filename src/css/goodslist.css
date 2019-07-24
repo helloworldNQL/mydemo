@@ -873,6 +873,13 @@ img {
   font-size: 0;
   position: absolute;
 }
+.cnt-wrapper .g-main1 .goods-list .gl-warp .gl-item .other .addCart i {
+  background: url(../img/goodslist-cart-new.png) no-repeat center;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
 .cnt-wrapper .g-main1 .goods-list .gl-warp .gl-item .other .addCart, .cnt-wrapper .g-main1 .goods-list .gl-warp .gl-item .other .presale_cyqg {
   width: 92px;
   height: 26px;
@@ -883,6 +890,14 @@ img {
   border: 1px solid #ddd;
   margin-left: -1px;
   position: relative;
+}
+.cnt-wrapper .g-main1 .goods-list .gl-warp .gl-item:hover {
+  border: 1px solid #863177;
+  z-index: 2;
+}
+.cnt-wrapper .g-main1 .goods-list .gl-warp .gl-item .other .addCart:hover, .cnt-wrapper .g-main1 .goods-list .gl-warp .gl-item .other .presale_cyqg:hover {
+  border: 1px solid #863177;
+  z-index: 1;
 }
 .cnt-wrapper .g-main1 .item-style-v1 .gl-item {
   height: 456px;

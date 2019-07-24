@@ -474,6 +474,29 @@ ins {
             background-position: -50px -30px;
             cursor: pointer;
         }
+        .d-tip .tips-message {
+            display: none;
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            width: 280px;
+            line-height: 180%;
+            padding: 8px 10px;
+            border: 1px solid #eee;
+            background: #fff;
+            color: #595959;
+            text-align: left;
+            cursor: default;
+        }
+        .d-tip .icon-arrowL {
+            position: absolute;
+            left: -6px;
+            top: 10px;
+            width: 6px;
+            height: 9px;
+            background-image: url(//static.360buyimg.com/item/worldbuy-new/1.0.65/components/common/i/__sprite.png?v=1552459647855);
+            background-position: -18px -50px;
+        }
         .summary {
             position: relative;
             padding-bottom: 5px;
@@ -944,6 +967,10 @@ ins {
         .summary-tips {
             border-top: 1px solid #eee;
             padding-top: 16px;
+        }
+        .btn-primary, .btn-special1 {
+            background-color: #ff3e68;
+            color: #fff;
         }
         /* 截止 */
     }

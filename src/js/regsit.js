@@ -25,32 +25,40 @@ function pic() {
         $('.item-getcode-wrap').hide();
         $('.item-phonecode-wrap').show();
         //验证成功自动发送短信验证120s后可重新获取
-        $.ajax({
-            type: "post",
-            data: {
-                userphone: $('#form-phone').val()//换成你的号码即可
-            },
-            url: "../api/duanxin.php",
-            async: true,
-            success: function (str) {
-                //返回验证码
-                console.log(str);
-                let arr =JSON.parse(str);
-                telCode(arr.phonecode);
-                console.log(arr.phonecode);
-            }
-        });
+        dao();
+        infpass();
 
     }, function () {
         $('#mpanel').empty();
         pic();
     });
 }
+$('#getPhoneCode').click(function(){
+    dao();
+    infpass();
+});
+function infpass(){
+    $.ajax({
+        type: "post",
+        data: {
+            userphone: $('#form-phone').val()//换成你的号码即可
+        },
+        url: "../api/duanxin.php",
+        async: true,
+        success: function (str) {
+            //返回验证码
+            console.log(str);
+            let arr =JSON.parse(str);
+            telCode(arr.phonecode);
+            console.log(arr.phonecode);
+        }
+    });
+}
 //验证验证码
 function telCode(code) {
     //验证码正确才可以点击下一步
     $('#step1-next').click(function () {
-        console.log(code);
+        // console.log(code);
         if ($('#phoneCode').val() == code) {
             $('#step1-wrap').hide();
             $('#step2-wrap').show();
@@ -60,6 +68,8 @@ function telCode(code) {
         } else {
             console.log(code);
             alert('您的验证码不正确,请重新输入');
+            $('#step1-wrap').show();
+            $('#step2-wrap').hide();  
         }
     });
 }
@@ -172,3 +182,23 @@ $('#form-register').click(function () {
         alert('请完善正确的信息');
     }
 });
+function dao(){
+    let num =120;
+    function settime() {
+        num--;
+        //console.log(num);
+        if (num < 0) {
+            $('#getPhoneCode').html('重新发送验证码');
+            //关闭定时器
+            clearInterval(timer);
+            //设置按钮恢复点击
+            $('#getPhoneCode').attr('disabled',false);
+        } else {
+            $('#getPhoneCode').html(num + '秒再获取');
+            //设置按钮不可点击
+            $('#getPhoneCode').attr('disabled',true);
+        }
+    }
+    let timer = setInterval(settime, 1000);
+}
+
